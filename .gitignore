@@ -2,3 +2,6 @@
 images/
 AGENTS.md
 CLAUDE.md
+node_modules/
+dist/
+*.tsbuildinfo
