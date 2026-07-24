@@ -1,0 +1,1064 @@
+[
+  {
+    "name_ja": "アイスランド",
+    "name": "Iceland",
+    "iso_a2": "IS",
+    "flag": "is.svg"
+  },
+  {
+    "name_ja": "アイルランド",
+    "name": "Ireland",
+    "iso_a2": "IE",
+    "flag": "ie.svg"
+  },
+  {
+    "name_ja": "アゼルバイジャン",
+    "name": "Azerbaijan",
+    "iso_a2": "AZ",
+    "flag": "az.svg"
+  },
+  {
+    "name_ja": "アフガニスタン",
+    "name": "Afghanistan",
+    "iso_a2": "AF",
+    "flag": "af.svg"
+  },
+  {
+    "name_ja": "アメリカ合衆国",
+    "name": "United States of America",
+    "iso_a2": "US",
+    "flag": "us.svg"
+  },
+  {
+    "name_ja": "アラブ首長国連邦",
+    "name": "United Arab Emirates",
+    "iso_a2": "AE",
+    "flag": "ae.svg"
+  },
+  {
+    "name_ja": "アルジェリア",
+    "name": "Algeria",
+    "iso_a2": "DZ",
+    "flag": "dz.svg"
+  },
+  {
+    "name_ja": "アルゼンチン",
+    "name": "Argentina",
+    "iso_a2": "AR",
+    "flag": "ar.svg"
+  },
+  {
+    "name_ja": "アルバニア",
+    "name": "Albania",
+    "iso_a2": "AL",
+    "flag": "al.svg"
+  },
+  {
+    "name_ja": "アルメニア",
+    "name": "Armenia",
+    "iso_a2": "AM",
+    "flag": "am.svg"
+  },
+  {
+    "name_ja": "アンゴラ",
+    "name": "Angola",
+    "iso_a2": "AO",
+    "flag": "ao.svg"
+  },
+  {
+    "name_ja": "イエメン",
+    "name": "Yemen",
+    "iso_a2": "YE",
+    "flag": "ye.svg"
+  },
+  {
+    "name_ja": "イギリス",
+    "name": "United Kingdom",
+    "iso_a2": "GB",
+    "flag": "gb.svg"
+  },
+  {
+    "name_ja": "イスラエル",
+    "name": "Israel",
+    "iso_a2": "IL",
+    "flag": "il.svg"
+  },
+  {
+    "name_ja": "イタリア",
+    "name": "Italy",
+    "iso_a2": "IT",
+    "flag": "it.svg"
+  },
+  {
+    "name_ja": "イラク",
+    "name": "Iraq",
+    "iso_a2": "IQ",
+    "flag": "iq.svg"
+  },
+  {
+    "name_ja": "イラン",
+    "name": "Iran",
+    "iso_a2": "IR",
+    "flag": "ir.svg"
+  },
+  {
+    "name_ja": "インド",
+    "name": "India",
+    "iso_a2": "IN",
+    "flag": "in.svg"
+  },
+  {
+    "name_ja": "インドネシア",
+    "name": "Indonesia",
+    "iso_a2": "ID",
+    "flag": "id.svg"
+  },
+  {
+    "name_ja": "ウガンダ",
+    "name": "Uganda",
+    "iso_a2": "UG",
+    "flag": "ug.svg"
+  },
+  {
+    "name_ja": "ウクライナ",
+    "name": "Ukraine",
+    "iso_a2": "UA",
+    "flag": "ua.svg"
+  },
+  {
+    "name_ja": "ウズベキスタン",
+    "name": "Uzbekistan",
+    "iso_a2": "UZ",
+    "flag": "uz.svg"
+  },
+  {
+    "name_ja": "ウルグアイ",
+    "name": "Uruguay",
+    "iso_a2": "UY",
+    "flag": "uy.svg"
+  },
+  {
+    "name_ja": "エクアドル",
+    "name": "Ecuador",
+    "iso_a2": "EC",
+    "flag": "ec.svg"
+  },
+  {
+    "name_ja": "エジプト",
+    "name": "Egypt",
+    "iso_a2": "EG",
+    "flag": "eg.svg"
+  },
+  {
+    "name_ja": "エストニア",
+    "name": "Estonia",
+    "iso_a2": "EE",
+    "flag": "ee.svg"
+  },
+  {
+    "name_ja": "エスワティニ",
+    "name": "eSwatini",
+    "iso_a2": "SZ",
+    "flag": "sz.svg"
+  },
+  {
+    "name_ja": "エチオピア",
+    "name": "Ethiopia",
+    "iso_a2": "ET",
+    "flag": "et.svg"
+  },
+  {
+    "name_ja": "エリトリア",
+    "name": "Eritrea",
+    "iso_a2": "ER",
+    "flag": "er.svg"
+  },
+  {
+    "name_ja": "エルサルバドル",
+    "name": "El Salvador",
+    "iso_a2": "SV",
+    "flag": "sv.svg"
+  },
+  {
+    "name_ja": "オーストラリア",
+    "name": "Australia",
+    "iso_a2": "AU",
+    "flag": "au.svg"
+  },
+  {
+    "name_ja": "オーストリア",
+    "name": "Austria",
+    "iso_a2": "AT",
+    "flag": "at.svg"
+  },
+  {
+    "name_ja": "オマーン",
+    "name": "Oman",
+    "iso_a2": "OM",
+    "flag": "om.svg"
+  },
+  {
+    "name_ja": "オランダ",
+    "name": "Netherlands",
+    "iso_a2": "NL",
+    "flag": "nl.svg"
+  },
+  {
+    "name_ja": "ガーナ",
+    "name": "Ghana",
+    "iso_a2": "GH",
+    "flag": "gh.svg"
+  },
+  {
+    "name_ja": "ガイアナ",
+    "name": "Guyana",
+    "iso_a2": "GY",
+    "flag": "gy.svg"
+  },
+  {
+    "name_ja": "カザフスタン",
+    "name": "Kazakhstan",
+    "iso_a2": "KZ",
+    "flag": "kz.svg"
+  },
+  {
+    "name_ja": "カタール",
+    "name": "Qatar",
+    "iso_a2": "QA",
+    "flag": "qa.svg"
+  },
+  {
+    "name_ja": "カナダ",
+    "name": "Canada",
+    "iso_a2": "CA",
+    "flag": "ca.svg"
+  },
+  {
+    "name_ja": "ガボン",
+    "name": "Gabon",
+    "iso_a2": "GA",
+    "flag": "ga.svg"
+  },
+  {
+    "name_ja": "カメルーン",
+    "name": "Cameroon",
+    "iso_a2": "CM",
+    "flag": "cm.svg"
+  },
+  {
+    "name_ja": "ガンビア",
+    "name": "Gambia",
+    "iso_a2": "GM",
+    "flag": "gm.svg"
+  },
+  {
+    "name_ja": "カンボジア",
+    "name": "Cambodia",
+    "iso_a2": "KH",
+    "flag": "kh.svg"
+  },
+  {
+    "name_ja": "ギニア",
+    "name": "Guinea",
+    "iso_a2": "GN",
+    "flag": "gn.svg"
+  },
+  {
+    "name_ja": "ギニアビサウ",
+    "name": "Guinea-Bissau",
+    "iso_a2": "GW",
+    "flag": "gw.svg"
+  },
+  {
+    "name_ja": "キプロス",
+    "name": "Cyprus",
+    "iso_a2": "CY",
+    "flag": "cy.svg"
+  },
+  {
+    "name_ja": "キューバ",
+    "name": "Cuba",
+    "iso_a2": "CU",
+    "flag": "cu.svg"
+  },
+  {
+    "name_ja": "ギリシャ",
+    "name": "Greece",
+    "iso_a2": "GR",
+    "flag": "gr.svg"
+  },
+  {
+    "name_ja": "キルギス",
+    "name": "Kyrgyzstan",
+    "iso_a2": "KG",
+    "flag": "kg.svg"
+  },
+  {
+    "name_ja": "グアテマラ",
+    "name": "Guatemala",
+    "iso_a2": "GT",
+    "flag": "gt.svg"
+  },
+  {
+    "name_ja": "クウェート",
+    "name": "Kuwait",
+    "iso_a2": "KW",
+    "flag": "kw.svg"
+  },
+  {
+    "name_ja": "グリーンランド",
+    "name": "Greenland",
+    "iso_a2": "GL",
+    "flag": "gl.svg"
+  },
+  {
+    "name_ja": "クロアチア",
+    "name": "Croatia",
+    "iso_a2": "HR",
+    "flag": "hr.svg"
+  },
+  {
+    "name_ja": "ケニア",
+    "name": "Kenya",
+    "iso_a2": "KE",
+    "flag": "ke.svg"
+  },
+  {
+    "name_ja": "コートジボワール",
+    "name": "Côte d'Ivoire",
+    "iso_a2": "CI",
+    "flag": "ci.svg"
+  },
+  {
+    "name_ja": "コスタリカ",
+    "name": "Costa Rica",
+    "iso_a2": "CR",
+    "flag": "cr.svg"
+  },
+  {
+    "name_ja": "コソボ共和国",
+    "name": "Kosovo",
+    "iso_a2": "-99",
+    "flag": "xk.svg"
+  },
+  {
+    "name_ja": "コロンビア",
+    "name": "Colombia",
+    "iso_a2": "CO",
+    "flag": "co.svg"
+  },
+  {
+    "name_ja": "コンゴ共和国",
+    "name": "Congo",
+    "iso_a2": "CG",
+    "flag": "cg.svg"
+  },
+  {
+    "name_ja": "コンゴ民主共和国",
+    "name": "Dem. Rep. Congo",
+    "iso_a2": "CD",
+    "flag": "cd.svg"
+  },
+  {
+    "name_ja": "サウジアラビア",
+    "name": "Saudi Arabia",
+    "iso_a2": "SA",
+    "flag": "sa.svg"
+  },
+  {
+    "name_ja": "ザンビア",
+    "name": "Zambia",
+    "iso_a2": "ZM",
+    "flag": "zm.svg"
+  },
+  {
+    "name_ja": "シエラレオネ",
+    "name": "Sierra Leone",
+    "iso_a2": "SL",
+    "flag": "sl.svg"
+  },
+  {
+    "name_ja": "ジブチ",
+    "name": "Djibouti",
+    "iso_a2": "DJ",
+    "flag": "dj.svg"
+  },
+  {
+    "name_ja": "ジャマイカ",
+    "name": "Jamaica",
+    "iso_a2": "JM",
+    "flag": "jm.svg"
+  },
+  {
+    "name_ja": "ジョージア",
+    "name": "Georgia",
+    "iso_a2": "GE",
+    "flag": "ge.svg"
+  },
+  {
+    "name_ja": "シリア",
+    "name": "Syria",
+    "iso_a2": "SY",
+    "flag": "sy.svg"
+  },
+  {
+    "name_ja": "ジンバブエ",
+    "name": "Zimbabwe",
+    "iso_a2": "ZW",
+    "flag": "zw.svg"
+  },
+  {
+    "name_ja": "スイス",
+    "name": "Switzerland",
+    "iso_a2": "CH",
+    "flag": "ch.svg"
+  },
+  {
+    "name_ja": "スウェーデン",
+    "name": "Sweden",
+    "iso_a2": "SE",
+    "flag": "se.svg"
+  },
+  {
+    "name_ja": "スーダン",
+    "name": "Sudan",
+    "iso_a2": "SD",
+    "flag": "sd.svg"
+  },
+  {
+    "name_ja": "スペイン",
+    "name": "Spain",
+    "iso_a2": "ES",
+    "flag": "es.svg"
+  },
+  {
+    "name_ja": "スリナム",
+    "name": "Suriname",
+    "iso_a2": "SR",
+    "flag": "sr.svg"
+  },
+  {
+    "name_ja": "スリランカ",
+    "name": "Sri Lanka",
+    "iso_a2": "LK",
+    "flag": "lk.svg"
+  },
+  {
+    "name_ja": "スロバキア",
+    "name": "Slovakia",
+    "iso_a2": "SK",
+    "flag": "sk.svg"
+  },
+  {
+    "name_ja": "スロベニア",
+    "name": "Slovenia",
+    "iso_a2": "SI",
+    "flag": "si.svg"
+  },
+  {
+    "name_ja": "セネガル",
+    "name": "Senegal",
+    "iso_a2": "SN",
+    "flag": "sn.svg"
+  },
+  {
+    "name_ja": "セルビア",
+    "name": "Serbia",
+    "iso_a2": "RS",
+    "flag": "rs.svg"
+  },
+  {
+    "name_ja": "ソマリア",
+    "name": "Somalia",
+    "iso_a2": "SO",
+    "flag": "so.svg"
+  },
+  {
+    "name_ja": "ソマリランド",
+    "name": "Somaliland",
+    "iso_a2": "-99",
+    "flag": null
+  },
+  {
+    "name_ja": "ソロモン諸島",
+    "name": "Solomon Is.",
+    "iso_a2": "SB",
+    "flag": "sb.svg"
+  },
+  {
+    "name_ja": "タイ王国",
+    "name": "Thailand",
+    "iso_a2": "TH",
+    "flag": "th.svg"
+  },
+  {
+    "name_ja": "タジキスタン",
+    "name": "Tajikistan",
+    "iso_a2": "TJ",
+    "flag": "tj.svg"
+  },
+  {
+    "name_ja": "タンザニア",
+    "name": "Tanzania",
+    "iso_a2": "TZ",
+    "flag": "tz.svg"
+  },
+  {
+    "name_ja": "チェコ",
+    "name": "Czechia",
+    "iso_a2": "CZ",
+    "flag": "cz.svg"
+  },
+  {
+    "name_ja": "チャド",
+    "name": "Chad",
+    "iso_a2": "TD",
+    "flag": "td.svg"
+  },
+  {
+    "name_ja": "チュニジア",
+    "name": "Tunisia",
+    "iso_a2": "TN",
+    "flag": "tn.svg"
+  },
+  {
+    "name_ja": "チリ",
+    "name": "Chile",
+    "iso_a2": "CL",
+    "flag": "cl.svg"
+  },
+  {
+    "name_ja": "デンマーク",
+    "name": "Denmark",
+    "iso_a2": "DK",
+    "flag": "dk.svg"
+  },
+  {
+    "name_ja": "ドイツ",
+    "name": "Germany",
+    "iso_a2": "DE",
+    "flag": "de.svg"
+  },
+  {
+    "name_ja": "トーゴ",
+    "name": "Togo",
+    "iso_a2": "TG",
+    "flag": "tg.svg"
+  },
+  {
+    "name_ja": "ドミニカ共和国",
+    "name": "Dominican Rep.",
+    "iso_a2": "DO",
+    "flag": "do.svg"
+  },
+  {
+    "name_ja": "トリニダード・トバゴ",
+    "name": "Trinidad and Tobago",
+    "iso_a2": "TT",
+    "flag": "tt.svg"
+  },
+  {
+    "name_ja": "トルクメニスタン",
+    "name": "Turkmenistan",
+    "iso_a2": "TM",
+    "flag": "tm.svg"
+  },
+  {
+    "name_ja": "トルコ",
+    "name": "Turkey",
+    "iso_a2": "TR",
+    "flag": "tr.svg"
+  },
+  {
+    "name_ja": "ナイジェリア",
+    "name": "Nigeria",
+    "iso_a2": "NG",
+    "flag": "ng.svg"
+  },
+  {
+    "name_ja": "ナミビア",
+    "name": "Namibia",
+    "iso_a2": "NA",
+    "flag": "na.svg"
+  },
+  {
+    "name_ja": "ニカラグア",
+    "name": "Nicaragua",
+    "iso_a2": "NI",
+    "flag": "ni.svg"
+  },
+  {
+    "name_ja": "ニジェール",
+    "name": "Niger",
+    "iso_a2": "NE",
+    "flag": "ne.svg"
+  },
+  {
+    "name_ja": "ニューカレドニア",
+    "name": "New Caledonia",
+    "iso_a2": "NC",
+    "flag": "nc.svg"
+  },
+  {
+    "name_ja": "ニュージーランド",
+    "name": "New Zealand",
+    "iso_a2": "NZ",
+    "flag": "nz.svg"
+  },
+  {
+    "name_ja": "ネパール",
+    "name": "Nepal",
+    "iso_a2": "NP",
+    "flag": "np.svg"
+  },
+  {
+    "name_ja": "ノルウェー",
+    "name": "Norway",
+    "iso_a2": "-99",
+    "flag": "no.svg"
+  },
+  {
+    "name_ja": "ハイチ",
+    "name": "Haiti",
+    "iso_a2": "HT",
+    "flag": "ht.svg"
+  },
+  {
+    "name_ja": "パキスタン",
+    "name": "Pakistan",
+    "iso_a2": "PK",
+    "flag": "pk.svg"
+  },
+  {
+    "name_ja": "パナマ",
+    "name": "Panama",
+    "iso_a2": "PA",
+    "flag": "pa.svg"
+  },
+  {
+    "name_ja": "バヌアツ",
+    "name": "Vanuatu",
+    "iso_a2": "VU",
+    "flag": "vu.svg"
+  },
+  {
+    "name_ja": "バハマ",
+    "name": "Bahamas",
+    "iso_a2": "BS",
+    "flag": "bs.svg"
+  },
+  {
+    "name_ja": "パプアニューギニア",
+    "name": "Papua New Guinea",
+    "iso_a2": "PG",
+    "flag": "pg.svg"
+  },
+  {
+    "name_ja": "パラグアイ",
+    "name": "Paraguay",
+    "iso_a2": "PY",
+    "flag": "py.svg"
+  },
+  {
+    "name_ja": "パレスチナ",
+    "name": "Palestine",
+    "iso_a2": "PS",
+    "flag": "ps.svg"
+  },
+  {
+    "name_ja": "ハンガリー",
+    "name": "Hungary",
+    "iso_a2": "HU",
+    "flag": "hu.svg"
+  },
+  {
+    "name_ja": "バングラデシュ",
+    "name": "Bangladesh",
+    "iso_a2": "BD",
+    "flag": "bd.svg"
+  },
+  {
+    "name_ja": "フィジー",
+    "name": "Fiji",
+    "iso_a2": "FJ",
+    "flag": "fj.svg"
+  },
+  {
+    "name_ja": "フィリピン",
+    "name": "Philippines",
+    "iso_a2": "PH",
+    "flag": "ph.svg"
+  },
+  {
+    "name_ja": "フィンランド",
+    "name": "Finland",
+    "iso_a2": "FI",
+    "flag": "fi.svg"
+  },
+  {
+    "name_ja": "ブータン",
+    "name": "Bhutan",
+    "iso_a2": "BT",
+    "flag": "bt.svg"
+  },
+  {
+    "name_ja": "プエルトリコ",
+    "name": "Puerto Rico",
+    "iso_a2": "PR",
+    "flag": "pr.svg"
+  },
+  {
+    "name_ja": "フォークランド諸島",
+    "name": "Falkland Is.",
+    "iso_a2": "FK",
+    "flag": "fk.svg"
+  },
+  {
+    "name_ja": "ブラジル",
+    "name": "Brazil",
+    "iso_a2": "BR",
+    "flag": "br.svg"
+  },
+  {
+    "name_ja": "フランス",
+    "name": "France",
+    "iso_a2": "-99",
+    "flag": "fr.svg"
+  },
+  {
+    "name_ja": "フランス領南方・南極地域",
+    "name": "Fr. S. Antarctic Lands",
+    "iso_a2": "TF",
+    "flag": "tf.svg"
+  },
+  {
+    "name_ja": "ブルガリア",
+    "name": "Bulgaria",
+    "iso_a2": "BG",
+    "flag": "bg.svg"
+  },
+  {
+    "name_ja": "ブルキナファソ",
+    "name": "Burkina Faso",
+    "iso_a2": "BF",
+    "flag": "bf.svg"
+  },
+  {
+    "name_ja": "ブルネイ",
+    "name": "Brunei",
+    "iso_a2": "BN",
+    "flag": "bn.svg"
+  },
+  {
+    "name_ja": "ブルンジ",
+    "name": "Burundi",
+    "iso_a2": "BI",
+    "flag": "bi.svg"
+  },
+  {
+    "name_ja": "ベトナム",
+    "name": "Vietnam",
+    "iso_a2": "VN",
+    "flag": "vn.svg"
+  },
+  {
+    "name_ja": "ベナン",
+    "name": "Benin",
+    "iso_a2": "BJ",
+    "flag": "bj.svg"
+  },
+  {
+    "name_ja": "ベネズエラ",
+    "name": "Venezuela",
+    "iso_a2": "VE",
+    "flag": "ve.svg"
+  },
+  {
+    "name_ja": "ベラルーシ",
+    "name": "Belarus",
+    "iso_a2": "BY",
+    "flag": "by.svg"
+  },
+  {
+    "name_ja": "ベリーズ",
+    "name": "Belize",
+    "iso_a2": "BZ",
+    "flag": "bz.svg"
+  },
+  {
+    "name_ja": "ペルー",
+    "name": "Peru",
+    "iso_a2": "PE",
+    "flag": "pe.svg"
+  },
+  {
+    "name_ja": "ベルギー",
+    "name": "Belgium",
+    "iso_a2": "BE",
+    "flag": "be.svg"
+  },
+  {
+    "name_ja": "ポーランド",
+    "name": "Poland",
+    "iso_a2": "PL",
+    "flag": "pl.svg"
+  },
+  {
+    "name_ja": "ボスニア・ヘルツェゴビナ",
+    "name": "Bosnia and Herz.",
+    "iso_a2": "BA",
+    "flag": "ba.svg"
+  },
+  {
+    "name_ja": "ボツワナ",
+    "name": "Botswana",
+    "iso_a2": "BW",
+    "flag": "bw.svg"
+  },
+  {
+    "name_ja": "ボリビア",
+    "name": "Bolivia",
+    "iso_a2": "BO",
+    "flag": "bo.svg"
+  },
+  {
+    "name_ja": "ポルトガル",
+    "name": "Portugal",
+    "iso_a2": "PT",
+    "flag": "pt.svg"
+  },
+  {
+    "name_ja": "ホンジュラス",
+    "name": "Honduras",
+    "iso_a2": "HN",
+    "flag": "hn.svg"
+  },
+  {
+    "name_ja": "マダガスカル",
+    "name": "Madagascar",
+    "iso_a2": "MG",
+    "flag": "mg.svg"
+  },
+  {
+    "name_ja": "マラウイ",
+    "name": "Malawi",
+    "iso_a2": "MW",
+    "flag": "mw.svg"
+  },
+  {
+    "name_ja": "マリ共和国",
+    "name": "Mali",
+    "iso_a2": "ML",
+    "flag": "ml.svg"
+  },
+  {
+    "name_ja": "マレーシア",
+    "name": "Malaysia",
+    "iso_a2": "MY",
+    "flag": "my.svg"
+  },
+  {
+    "name_ja": "ミャンマー",
+    "name": "Myanmar",
+    "iso_a2": "MM",
+    "flag": "mm.svg"
+  },
+  {
+    "name_ja": "メキシコ",
+    "name": "Mexico",
+    "iso_a2": "MX",
+    "flag": "mx.svg"
+  },
+  {
+    "name_ja": "モーリタニア",
+    "name": "Mauritania",
+    "iso_a2": "MR",
+    "flag": "mr.svg"
+  },
+  {
+    "name_ja": "モザンビーク",
+    "name": "Mozambique",
+    "iso_a2": "MZ",
+    "flag": "mz.svg"
+  },
+  {
+    "name_ja": "モルドバ",
+    "name": "Moldova",
+    "iso_a2": "MD",
+    "flag": "md.svg"
+  },
+  {
+    "name_ja": "モロッコ",
+    "name": "Morocco",
+    "iso_a2": "MA",
+    "flag": "ma.svg"
+  },
+  {
+    "name_ja": "モンゴル国",
+    "name": "Mongolia",
+    "iso_a2": "MN",
+    "flag": "mn.svg"
+  },
+  {
+    "name_ja": "モンテネグロ",
+    "name": "Montenegro",
+    "iso_a2": "ME",
+    "flag": "me.svg"
+  },
+  {
+    "name_ja": "ヨルダン",
+    "name": "Jordan",
+    "iso_a2": "JO",
+    "flag": "jo.svg"
+  },
+  {
+    "name_ja": "ラオス",
+    "name": "Laos",
+    "iso_a2": "LA",
+    "flag": "la.svg"
+  },
+  {
+    "name_ja": "ラトビア",
+    "name": "Latvia",
+    "iso_a2": "LV",
+    "flag": "lv.svg"
+  },
+  {
+    "name_ja": "リトアニア",
+    "name": "Lithuania",
+    "iso_a2": "LT",
+    "flag": "lt.svg"
+  },
+  {
+    "name_ja": "リビア",
+    "name": "Libya",
+    "iso_a2": "LY",
+    "flag": "ly.svg"
+  },
+  {
+    "name_ja": "リベリア",
+    "name": "Liberia",
+    "iso_a2": "LR",
+    "flag": "lr.svg"
+  },
+  {
+    "name_ja": "ルーマニア",
+    "name": "Romania",
+    "iso_a2": "RO",
+    "flag": "ro.svg"
+  },
+  {
+    "name_ja": "ルクセンブルク",
+    "name": "Luxembourg",
+    "iso_a2": "LU",
+    "flag": "lu.svg"
+  },
+  {
+    "name_ja": "ルワンダ",
+    "name": "Rwanda",
+    "iso_a2": "RW",
+    "flag": "rw.svg"
+  },
+  {
+    "name_ja": "レソト",
+    "name": "Lesotho",
+    "iso_a2": "LS",
+    "flag": "ls.svg"
+  },
+  {
+    "name_ja": "レバノン",
+    "name": "Lebanon",
+    "iso_a2": "LB",
+    "flag": "lb.svg"
+  },
+  {
+    "name_ja": "ロシア",
+    "name": "Russia",
+    "iso_a2": "RU",
+    "flag": "ru.svg"
+  },
+  {
+    "name_ja": "西サハラ",
+    "name": "W. Sahara",
+    "iso_a2": "EH",
+    "flag": "eh.svg"
+  },
+  {
+    "name_ja": "赤道ギニア",
+    "name": "Eq. Guinea",
+    "iso_a2": "GQ",
+    "flag": "gq.svg"
+  },
+  {
+    "name_ja": "大韓民国",
+    "name": "South Korea",
+    "iso_a2": "KR",
+    "flag": "kr.svg"
+  },
+  {
+    "name_ja": "中央アフリカ共和国",
+    "name": "Central African Rep.",
+    "iso_a2": "CF",
+    "flag": "cf.svg"
+  },
+  {
+    "name_ja": "中華人民共和国",
+    "name": "China",
+    "iso_a2": "CN",
+    "flag": "cn.svg"
+  },
+  {
+    "name_ja": "中華民国",
+    "name": "Taiwan",
+    "iso_a2": "CN-TW",
+    "flag": "tw.svg"
+  },
+  {
+    "name_ja": "朝鮮民主主義人民共和国",
+    "name": "North Korea",
+    "iso_a2": "KP",
+    "flag": "kp.svg"
+  },
+  {
+    "name_ja": "東ティモール",
+    "name": "Timor-Leste",
+    "iso_a2": "TL",
+    "flag": "tl.svg"
+  },
+  {
+    "name_ja": "南アフリカ共和国",
+    "name": "South Africa",
+    "iso_a2": "ZA",
+    "flag": "za.svg"
+  },
+  {
+    "name_ja": "南スーダン",
+    "name": "S. Sudan",
+    "iso_a2": "SS",
+    "flag": "ss.svg"
+  },
+  {
+    "name_ja": "南極大陸",
+    "name": "Antarctica",
+    "iso_a2": "AQ",
+    "flag": "aq.svg"
+  },
+  {
+    "name_ja": "日本",
+    "name": "Japan",
+    "iso_a2": "JP",
+    "flag": "jp.svg"
+  },
+  {
+    "name_ja": "北キプロス・トルコ共和国",
+    "name": "N. Cyprus",
+    "iso_a2": "-99",
+    "flag": null
+  },
+  {
+    "name_ja": "北マケドニア",
+    "name": "North Macedonia",
+    "iso_a2": "MK",
+    "flag": "mk.svg"
+  }
+]

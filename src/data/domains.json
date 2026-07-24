@@ -1,0 +1,1395 @@
+[
+  {
+    "name_ja": "アイスランド",
+    "name": "Iceland",
+    "iso_a2": "IS",
+    "tld": [
+      ".is"
+    ]
+  },
+  {
+    "name_ja": "アイルランド",
+    "name": "Ireland",
+    "iso_a2": "IE",
+    "tld": [
+      ".ie"
+    ]
+  },
+  {
+    "name_ja": "アゼルバイジャン",
+    "name": "Azerbaijan",
+    "iso_a2": "AZ",
+    "tld": [
+      ".az"
+    ]
+  },
+  {
+    "name_ja": "アフガニスタン",
+    "name": "Afghanistan",
+    "iso_a2": "AF",
+    "tld": [
+      ".af"
+    ]
+  },
+  {
+    "name_ja": "アメリカ合衆国",
+    "name": "United States of America",
+    "iso_a2": "US",
+    "tld": [
+      ".us"
+    ]
+  },
+  {
+    "name_ja": "アラブ首長国連邦",
+    "name": "United Arab Emirates",
+    "iso_a2": "AE",
+    "tld": [
+      ".ae"
+    ]
+  },
+  {
+    "name_ja": "アルジェリア",
+    "name": "Algeria",
+    "iso_a2": "DZ",
+    "tld": [
+      ".dz"
+    ]
+  },
+  {
+    "name_ja": "アルゼンチン",
+    "name": "Argentina",
+    "iso_a2": "AR",
+    "tld": [
+      ".ar"
+    ]
+  },
+  {
+    "name_ja": "アルバニア",
+    "name": "Albania",
+    "iso_a2": "AL",
+    "tld": [
+      ".al"
+    ]
+  },
+  {
+    "name_ja": "アルメニア",
+    "name": "Armenia",
+    "iso_a2": "AM",
+    "tld": [
+      ".am"
+    ]
+  },
+  {
+    "name_ja": "アンゴラ",
+    "name": "Angola",
+    "iso_a2": "AO",
+    "tld": [
+      ".ao"
+    ]
+  },
+  {
+    "name_ja": "イエメン",
+    "name": "Yemen",
+    "iso_a2": "YE",
+    "tld": [
+      ".ye"
+    ]
+  },
+  {
+    "name_ja": "イギリス",
+    "name": "United Kingdom",
+    "iso_a2": "GB",
+    "tld": [
+      ".gb",
+      ".uk"
+    ]
+  },
+  {
+    "name_ja": "イスラエル",
+    "name": "Israel",
+    "iso_a2": "IL",
+    "tld": [
+      ".il"
+    ]
+  },
+  {
+    "name_ja": "イタリア",
+    "name": "Italy",
+    "iso_a2": "IT",
+    "tld": [
+      ".it"
+    ]
+  },
+  {
+    "name_ja": "イラク",
+    "name": "Iraq",
+    "iso_a2": "IQ",
+    "tld": [
+      ".iq"
+    ]
+  },
+  {
+    "name_ja": "イラン",
+    "name": "Iran",
+    "iso_a2": "IR",
+    "tld": [
+      ".ir"
+    ]
+  },
+  {
+    "name_ja": "インド",
+    "name": "India",
+    "iso_a2": "IN",
+    "tld": [
+      ".in"
+    ]
+  },
+  {
+    "name_ja": "インドネシア",
+    "name": "Indonesia",
+    "iso_a2": "ID",
+    "tld": [
+      ".id"
+    ]
+  },
+  {
+    "name_ja": "ウガンダ",
+    "name": "Uganda",
+    "iso_a2": "UG",
+    "tld": [
+      ".ug"
+    ]
+  },
+  {
+    "name_ja": "ウクライナ",
+    "name": "Ukraine",
+    "iso_a2": "UA",
+    "tld": [
+      ".ua"
+    ]
+  },
+  {
+    "name_ja": "ウズベキスタン",
+    "name": "Uzbekistan",
+    "iso_a2": "UZ",
+    "tld": [
+      ".uz"
+    ]
+  },
+  {
+    "name_ja": "ウルグアイ",
+    "name": "Uruguay",
+    "iso_a2": "UY",
+    "tld": [
+      ".uy"
+    ]
+  },
+  {
+    "name_ja": "エクアドル",
+    "name": "Ecuador",
+    "iso_a2": "EC",
+    "tld": [
+      ".ec"
+    ]
+  },
+  {
+    "name_ja": "エジプト",
+    "name": "Egypt",
+    "iso_a2": "EG",
+    "tld": [
+      ".eg"
+    ]
+  },
+  {
+    "name_ja": "エストニア",
+    "name": "Estonia",
+    "iso_a2": "EE",
+    "tld": [
+      ".ee"
+    ]
+  },
+  {
+    "name_ja": "エスワティニ",
+    "name": "eSwatini",
+    "iso_a2": "SZ",
+    "tld": [
+      ".sz"
+    ]
+  },
+  {
+    "name_ja": "エチオピア",
+    "name": "Ethiopia",
+    "iso_a2": "ET",
+    "tld": [
+      ".et"
+    ]
+  },
+  {
+    "name_ja": "エリトリア",
+    "name": "Eritrea",
+    "iso_a2": "ER",
+    "tld": [
+      ".er"
+    ]
+  },
+  {
+    "name_ja": "エルサルバドル",
+    "name": "El Salvador",
+    "iso_a2": "SV",
+    "tld": [
+      ".sv"
+    ]
+  },
+  {
+    "name_ja": "オーストラリア",
+    "name": "Australia",
+    "iso_a2": "AU",
+    "tld": [
+      ".au"
+    ]
+  },
+  {
+    "name_ja": "オーストリア",
+    "name": "Austria",
+    "iso_a2": "AT",
+    "tld": [
+      ".at"
+    ]
+  },
+  {
+    "name_ja": "オマーン",
+    "name": "Oman",
+    "iso_a2": "OM",
+    "tld": [
+      ".om"
+    ]
+  },
+  {
+    "name_ja": "オランダ",
+    "name": "Netherlands",
+    "iso_a2": "NL",
+    "tld": [
+      ".nl"
+    ]
+  },
+  {
+    "name_ja": "ガーナ",
+    "name": "Ghana",
+    "iso_a2": "GH",
+    "tld": [
+      ".gh"
+    ]
+  },
+  {
+    "name_ja": "ガイアナ",
+    "name": "Guyana",
+    "iso_a2": "GY",
+    "tld": [
+      ".gy"
+    ]
+  },
+  {
+    "name_ja": "カザフスタン",
+    "name": "Kazakhstan",
+    "iso_a2": "KZ",
+    "tld": [
+      ".kz"
+    ]
+  },
+  {
+    "name_ja": "カタール",
+    "name": "Qatar",
+    "iso_a2": "QA",
+    "tld": [
+      ".qa"
+    ]
+  },
+  {
+    "name_ja": "カナダ",
+    "name": "Canada",
+    "iso_a2": "CA",
+    "tld": [
+      ".ca"
+    ]
+  },
+  {
+    "name_ja": "ガボン",
+    "name": "Gabon",
+    "iso_a2": "GA",
+    "tld": [
+      ".ga"
+    ]
+  },
+  {
+    "name_ja": "カメルーン",
+    "name": "Cameroon",
+    "iso_a2": "CM",
+    "tld": [
+      ".cm"
+    ]
+  },
+  {
+    "name_ja": "ガンビア",
+    "name": "Gambia",
+    "iso_a2": "GM",
+    "tld": [
+      ".gm"
+    ]
+  },
+  {
+    "name_ja": "カンボジア",
+    "name": "Cambodia",
+    "iso_a2": "KH",
+    "tld": [
+      ".kh"
+    ]
+  },
+  {
+    "name_ja": "ギニア",
+    "name": "Guinea",
+    "iso_a2": "GN",
+    "tld": [
+      ".gn"
+    ]
+  },
+  {
+    "name_ja": "ギニアビサウ",
+    "name": "Guinea-Bissau",
+    "iso_a2": "GW",
+    "tld": [
+      ".gw"
+    ]
+  },
+  {
+    "name_ja": "キプロス",
+    "name": "Cyprus",
+    "iso_a2": "CY",
+    "tld": [
+      ".cy"
+    ]
+  },
+  {
+    "name_ja": "キューバ",
+    "name": "Cuba",
+    "iso_a2": "CU",
+    "tld": [
+      ".cu"
+    ]
+  },
+  {
+    "name_ja": "ギリシャ",
+    "name": "Greece",
+    "iso_a2": "GR",
+    "tld": [
+      ".gr"
+    ]
+  },
+  {
+    "name_ja": "キルギス",
+    "name": "Kyrgyzstan",
+    "iso_a2": "KG",
+    "tld": [
+      ".kg"
+    ]
+  },
+  {
+    "name_ja": "グアテマラ",
+    "name": "Guatemala",
+    "iso_a2": "GT",
+    "tld": [
+      ".gt"
+    ]
+  },
+  {
+    "name_ja": "クウェート",
+    "name": "Kuwait",
+    "iso_a2": "KW",
+    "tld": [
+      ".kw"
+    ]
+  },
+  {
+    "name_ja": "グリーンランド",
+    "name": "Greenland",
+    "iso_a2": "GL",
+    "tld": [
+      ".gl"
+    ]
+  },
+  {
+    "name_ja": "クロアチア",
+    "name": "Croatia",
+    "iso_a2": "HR",
+    "tld": [
+      ".hr"
+    ]
+  },
+  {
+    "name_ja": "ケニア",
+    "name": "Kenya",
+    "iso_a2": "KE",
+    "tld": [
+      ".ke"
+    ]
+  },
+  {
+    "name_ja": "コートジボワール",
+    "name": "Côte d'Ivoire",
+    "iso_a2": "CI",
+    "tld": [
+      ".ci"
+    ]
+  },
+  {
+    "name_ja": "コスタリカ",
+    "name": "Costa Rica",
+    "iso_a2": "CR",
+    "tld": [
+      ".cr"
+    ]
+  },
+  {
+    "name_ja": "コロンビア",
+    "name": "Colombia",
+    "iso_a2": "CO",
+    "tld": [
+      ".co"
+    ]
+  },
+  {
+    "name_ja": "コンゴ共和国",
+    "name": "Congo",
+    "iso_a2": "CG",
+    "tld": [
+      ".cg"
+    ]
+  },
+  {
+    "name_ja": "コンゴ民主共和国",
+    "name": "Dem. Rep. Congo",
+    "iso_a2": "CD",
+    "tld": [
+      ".cd"
+    ]
+  },
+  {
+    "name_ja": "サウジアラビア",
+    "name": "Saudi Arabia",
+    "iso_a2": "SA",
+    "tld": [
+      ".sa"
+    ]
+  },
+  {
+    "name_ja": "ザンビア",
+    "name": "Zambia",
+    "iso_a2": "ZM",
+    "tld": [
+      ".zm"
+    ]
+  },
+  {
+    "name_ja": "シエラレオネ",
+    "name": "Sierra Leone",
+    "iso_a2": "SL",
+    "tld": [
+      ".sl"
+    ]
+  },
+  {
+    "name_ja": "ジブチ",
+    "name": "Djibouti",
+    "iso_a2": "DJ",
+    "tld": [
+      ".dj"
+    ]
+  },
+  {
+    "name_ja": "ジャマイカ",
+    "name": "Jamaica",
+    "iso_a2": "JM",
+    "tld": [
+      ".jm"
+    ]
+  },
+  {
+    "name_ja": "ジョージア",
+    "name": "Georgia",
+    "iso_a2": "GE",
+    "tld": [
+      ".ge"
+    ]
+  },
+  {
+    "name_ja": "シリア",
+    "name": "Syria",
+    "iso_a2": "SY",
+    "tld": [
+      ".sy"
+    ]
+  },
+  {
+    "name_ja": "ジンバブエ",
+    "name": "Zimbabwe",
+    "iso_a2": "ZW",
+    "tld": [
+      ".zw"
+    ]
+  },
+  {
+    "name_ja": "スイス",
+    "name": "Switzerland",
+    "iso_a2": "CH",
+    "tld": [
+      ".ch"
+    ]
+  },
+  {
+    "name_ja": "スウェーデン",
+    "name": "Sweden",
+    "iso_a2": "SE",
+    "tld": [
+      ".se"
+    ]
+  },
+  {
+    "name_ja": "スーダン",
+    "name": "Sudan",
+    "iso_a2": "SD",
+    "tld": [
+      ".sd"
+    ]
+  },
+  {
+    "name_ja": "スペイン",
+    "name": "Spain",
+    "iso_a2": "ES",
+    "tld": [
+      ".es"
+    ]
+  },
+  {
+    "name_ja": "スリナム",
+    "name": "Suriname",
+    "iso_a2": "SR",
+    "tld": [
+      ".sr"
+    ]
+  },
+  {
+    "name_ja": "スリランカ",
+    "name": "Sri Lanka",
+    "iso_a2": "LK",
+    "tld": [
+      ".lk"
+    ]
+  },
+  {
+    "name_ja": "スロバキア",
+    "name": "Slovakia",
+    "iso_a2": "SK",
+    "tld": [
+      ".sk"
+    ]
+  },
+  {
+    "name_ja": "スロベニア",
+    "name": "Slovenia",
+    "iso_a2": "SI",
+    "tld": [
+      ".si"
+    ]
+  },
+  {
+    "name_ja": "セネガル",
+    "name": "Senegal",
+    "iso_a2": "SN",
+    "tld": [
+      ".sn"
+    ]
+  },
+  {
+    "name_ja": "セルビア",
+    "name": "Serbia",
+    "iso_a2": "RS",
+    "tld": [
+      ".rs"
+    ]
+  },
+  {
+    "name_ja": "ソマリア",
+    "name": "Somalia",
+    "iso_a2": "SO",
+    "tld": [
+      ".so"
+    ]
+  },
+  {
+    "name_ja": "ソロモン諸島",
+    "name": "Solomon Is.",
+    "iso_a2": "SB",
+    "tld": [
+      ".sb"
+    ]
+  },
+  {
+    "name_ja": "タイ王国",
+    "name": "Thailand",
+    "iso_a2": "TH",
+    "tld": [
+      ".th"
+    ]
+  },
+  {
+    "name_ja": "タジキスタン",
+    "name": "Tajikistan",
+    "iso_a2": "TJ",
+    "tld": [
+      ".tj"
+    ]
+  },
+  {
+    "name_ja": "タンザニア",
+    "name": "Tanzania",
+    "iso_a2": "TZ",
+    "tld": [
+      ".tz"
+    ]
+  },
+  {
+    "name_ja": "チェコ",
+    "name": "Czechia",
+    "iso_a2": "CZ",
+    "tld": [
+      ".cz"
+    ]
+  },
+  {
+    "name_ja": "チャド",
+    "name": "Chad",
+    "iso_a2": "TD",
+    "tld": [
+      ".td"
+    ]
+  },
+  {
+    "name_ja": "チュニジア",
+    "name": "Tunisia",
+    "iso_a2": "TN",
+    "tld": [
+      ".tn"
+    ]
+  },
+  {
+    "name_ja": "チリ",
+    "name": "Chile",
+    "iso_a2": "CL",
+    "tld": [
+      ".cl"
+    ]
+  },
+  {
+    "name_ja": "デンマーク",
+    "name": "Denmark",
+    "iso_a2": "DK",
+    "tld": [
+      ".dk"
+    ]
+  },
+  {
+    "name_ja": "ドイツ",
+    "name": "Germany",
+    "iso_a2": "DE",
+    "tld": [
+      ".de"
+    ]
+  },
+  {
+    "name_ja": "トーゴ",
+    "name": "Togo",
+    "iso_a2": "TG",
+    "tld": [
+      ".tg"
+    ]
+  },
+  {
+    "name_ja": "ドミニカ共和国",
+    "name": "Dominican Rep.",
+    "iso_a2": "DO",
+    "tld": [
+      ".do"
+    ]
+  },
+  {
+    "name_ja": "トリニダード・トバゴ",
+    "name": "Trinidad and Tobago",
+    "iso_a2": "TT",
+    "tld": [
+      ".tt"
+    ]
+  },
+  {
+    "name_ja": "トルクメニスタン",
+    "name": "Turkmenistan",
+    "iso_a2": "TM",
+    "tld": [
+      ".tm"
+    ]
+  },
+  {
+    "name_ja": "トルコ",
+    "name": "Turkey",
+    "iso_a2": "TR",
+    "tld": [
+      ".tr"
+    ]
+  },
+  {
+    "name_ja": "ナイジェリア",
+    "name": "Nigeria",
+    "iso_a2": "NG",
+    "tld": [
+      ".ng"
+    ]
+  },
+  {
+    "name_ja": "ナミビア",
+    "name": "Namibia",
+    "iso_a2": "NA",
+    "tld": [
+      ".na"
+    ]
+  },
+  {
+    "name_ja": "ニカラグア",
+    "name": "Nicaragua",
+    "iso_a2": "NI",
+    "tld": [
+      ".ni"
+    ]
+  },
+  {
+    "name_ja": "ニジェール",
+    "name": "Niger",
+    "iso_a2": "NE",
+    "tld": [
+      ".ne"
+    ]
+  },
+  {
+    "name_ja": "ニューカレドニア",
+    "name": "New Caledonia",
+    "iso_a2": "NC",
+    "tld": [
+      ".nc"
+    ]
+  },
+  {
+    "name_ja": "ニュージーランド",
+    "name": "New Zealand",
+    "iso_a2": "NZ",
+    "tld": [
+      ".nz"
+    ]
+  },
+  {
+    "name_ja": "ネパール",
+    "name": "Nepal",
+    "iso_a2": "NP",
+    "tld": [
+      ".np"
+    ]
+  },
+  {
+    "name_ja": "ノルウェー",
+    "name": "Norway",
+    "iso_a2": "-99",
+    "tld": [
+      ".no"
+    ]
+  },
+  {
+    "name_ja": "ハイチ",
+    "name": "Haiti",
+    "iso_a2": "HT",
+    "tld": [
+      ".ht"
+    ]
+  },
+  {
+    "name_ja": "パキスタン",
+    "name": "Pakistan",
+    "iso_a2": "PK",
+    "tld": [
+      ".pk"
+    ]
+  },
+  {
+    "name_ja": "パナマ",
+    "name": "Panama",
+    "iso_a2": "PA",
+    "tld": [
+      ".pa"
+    ]
+  },
+  {
+    "name_ja": "バヌアツ",
+    "name": "Vanuatu",
+    "iso_a2": "VU",
+    "tld": [
+      ".vu"
+    ]
+  },
+  {
+    "name_ja": "バハマ",
+    "name": "Bahamas",
+    "iso_a2": "BS",
+    "tld": [
+      ".bs"
+    ]
+  },
+  {
+    "name_ja": "パプアニューギニア",
+    "name": "Papua New Guinea",
+    "iso_a2": "PG",
+    "tld": [
+      ".pg"
+    ]
+  },
+  {
+    "name_ja": "パラグアイ",
+    "name": "Paraguay",
+    "iso_a2": "PY",
+    "tld": [
+      ".py"
+    ]
+  },
+  {
+    "name_ja": "パレスチナ",
+    "name": "Palestine",
+    "iso_a2": "PS",
+    "tld": [
+      ".ps"
+    ]
+  },
+  {
+    "name_ja": "ハンガリー",
+    "name": "Hungary",
+    "iso_a2": "HU",
+    "tld": [
+      ".hu"
+    ]
+  },
+  {
+    "name_ja": "バングラデシュ",
+    "name": "Bangladesh",
+    "iso_a2": "BD",
+    "tld": [
+      ".bd"
+    ]
+  },
+  {
+    "name_ja": "フィジー",
+    "name": "Fiji",
+    "iso_a2": "FJ",
+    "tld": [
+      ".fj"
+    ]
+  },
+  {
+    "name_ja": "フィリピン",
+    "name": "Philippines",
+    "iso_a2": "PH",
+    "tld": [
+      ".ph"
+    ]
+  },
+  {
+    "name_ja": "フィンランド",
+    "name": "Finland",
+    "iso_a2": "FI",
+    "tld": [
+      ".fi"
+    ]
+  },
+  {
+    "name_ja": "ブータン",
+    "name": "Bhutan",
+    "iso_a2": "BT",
+    "tld": [
+      ".bt"
+    ]
+  },
+  {
+    "name_ja": "プエルトリコ",
+    "name": "Puerto Rico",
+    "iso_a2": "PR",
+    "tld": [
+      ".pr"
+    ]
+  },
+  {
+    "name_ja": "フォークランド諸島",
+    "name": "Falkland Is.",
+    "iso_a2": "FK",
+    "tld": [
+      ".fk"
+    ]
+  },
+  {
+    "name_ja": "ブラジル",
+    "name": "Brazil",
+    "iso_a2": "BR",
+    "tld": [
+      ".br"
+    ]
+  },
+  {
+    "name_ja": "フランス",
+    "name": "France",
+    "iso_a2": "-99",
+    "tld": [
+      ".fr"
+    ]
+  },
+  {
+    "name_ja": "フランス領南方・南極地域",
+    "name": "Fr. S. Antarctic Lands",
+    "iso_a2": "TF",
+    "tld": [
+      ".tf"
+    ]
+  },
+  {
+    "name_ja": "ブルガリア",
+    "name": "Bulgaria",
+    "iso_a2": "BG",
+    "tld": [
+      ".bg"
+    ]
+  },
+  {
+    "name_ja": "ブルキナファソ",
+    "name": "Burkina Faso",
+    "iso_a2": "BF",
+    "tld": [
+      ".bf"
+    ]
+  },
+  {
+    "name_ja": "ブルネイ",
+    "name": "Brunei",
+    "iso_a2": "BN",
+    "tld": [
+      ".bn"
+    ]
+  },
+  {
+    "name_ja": "ブルンジ",
+    "name": "Burundi",
+    "iso_a2": "BI",
+    "tld": [
+      ".bi"
+    ]
+  },
+  {
+    "name_ja": "ベトナム",
+    "name": "Vietnam",
+    "iso_a2": "VN",
+    "tld": [
+      ".vn"
+    ]
+  },
+  {
+    "name_ja": "ベナン",
+    "name": "Benin",
+    "iso_a2": "BJ",
+    "tld": [
+      ".bj"
+    ]
+  },
+  {
+    "name_ja": "ベネズエラ",
+    "name": "Venezuela",
+    "iso_a2": "VE",
+    "tld": [
+      ".ve"
+    ]
+  },
+  {
+    "name_ja": "ベラルーシ",
+    "name": "Belarus",
+    "iso_a2": "BY",
+    "tld": [
+      ".by"
+    ]
+  },
+  {
+    "name_ja": "ベリーズ",
+    "name": "Belize",
+    "iso_a2": "BZ",
+    "tld": [
+      ".bz"
+    ]
+  },
+  {
+    "name_ja": "ペルー",
+    "name": "Peru",
+    "iso_a2": "PE",
+    "tld": [
+      ".pe"
+    ]
+  },
+  {
+    "name_ja": "ベルギー",
+    "name": "Belgium",
+    "iso_a2": "BE",
+    "tld": [
+      ".be"
+    ]
+  },
+  {
+    "name_ja": "ポーランド",
+    "name": "Poland",
+    "iso_a2": "PL",
+    "tld": [
+      ".pl"
+    ]
+  },
+  {
+    "name_ja": "ボスニア・ヘルツェゴビナ",
+    "name": "Bosnia and Herz.",
+    "iso_a2": "BA",
+    "tld": [
+      ".ba"
+    ]
+  },
+  {
+    "name_ja": "ボツワナ",
+    "name": "Botswana",
+    "iso_a2": "BW",
+    "tld": [
+      ".bw"
+    ]
+  },
+  {
+    "name_ja": "ボリビア",
+    "name": "Bolivia",
+    "iso_a2": "BO",
+    "tld": [
+      ".bo"
+    ]
+  },
+  {
+    "name_ja": "ポルトガル",
+    "name": "Portugal",
+    "iso_a2": "PT",
+    "tld": [
+      ".pt"
+    ]
+  },
+  {
+    "name_ja": "ホンジュラス",
+    "name": "Honduras",
+    "iso_a2": "HN",
+    "tld": [
+      ".hn"
+    ]
+  },
+  {
+    "name_ja": "マダガスカル",
+    "name": "Madagascar",
+    "iso_a2": "MG",
+    "tld": [
+      ".mg"
+    ]
+  },
+  {
+    "name_ja": "マラウイ",
+    "name": "Malawi",
+    "iso_a2": "MW",
+    "tld": [
+      ".mw"
+    ]
+  },
+  {
+    "name_ja": "マリ共和国",
+    "name": "Mali",
+    "iso_a2": "ML",
+    "tld": [
+      ".ml"
+    ]
+  },
+  {
+    "name_ja": "マレーシア",
+    "name": "Malaysia",
+    "iso_a2": "MY",
+    "tld": [
+      ".my"
+    ]
+  },
+  {
+    "name_ja": "ミャンマー",
+    "name": "Myanmar",
+    "iso_a2": "MM",
+    "tld": [
+      ".mm"
+    ]
+  },
+  {
+    "name_ja": "メキシコ",
+    "name": "Mexico",
+    "iso_a2": "MX",
+    "tld": [
+      ".mx"
+    ]
+  },
+  {
+    "name_ja": "モーリタニア",
+    "name": "Mauritania",
+    "iso_a2": "MR",
+    "tld": [
+      ".mr"
+    ]
+  },
+  {
+    "name_ja": "モザンビーク",
+    "name": "Mozambique",
+    "iso_a2": "MZ",
+    "tld": [
+      ".mz"
+    ]
+  },
+  {
+    "name_ja": "モルドバ",
+    "name": "Moldova",
+    "iso_a2": "MD",
+    "tld": [
+      ".md"
+    ]
+  },
+  {
+    "name_ja": "モロッコ",
+    "name": "Morocco",
+    "iso_a2": "MA",
+    "tld": [
+      ".ma"
+    ]
+  },
+  {
+    "name_ja": "モンゴル国",
+    "name": "Mongolia",
+    "iso_a2": "MN",
+    "tld": [
+      ".mn"
+    ]
+  },
+  {
+    "name_ja": "モンテネグロ",
+    "name": "Montenegro",
+    "iso_a2": "ME",
+    "tld": [
+      ".me"
+    ]
+  },
+  {
+    "name_ja": "ヨルダン",
+    "name": "Jordan",
+    "iso_a2": "JO",
+    "tld": [
+      ".jo"
+    ]
+  },
+  {
+    "name_ja": "ラオス",
+    "name": "Laos",
+    "iso_a2": "LA",
+    "tld": [
+      ".la"
+    ]
+  },
+  {
+    "name_ja": "ラトビア",
+    "name": "Latvia",
+    "iso_a2": "LV",
+    "tld": [
+      ".lv"
+    ]
+  },
+  {
+    "name_ja": "リトアニア",
+    "name": "Lithuania",
+    "iso_a2": "LT",
+    "tld": [
+      ".lt"
+    ]
+  },
+  {
+    "name_ja": "リビア",
+    "name": "Libya",
+    "iso_a2": "LY",
+    "tld": [
+      ".ly"
+    ]
+  },
+  {
+    "name_ja": "リベリア",
+    "name": "Liberia",
+    "iso_a2": "LR",
+    "tld": [
+      ".lr"
+    ]
+  },
+  {
+    "name_ja": "ルーマニア",
+    "name": "Romania",
+    "iso_a2": "RO",
+    "tld": [
+      ".ro"
+    ]
+  },
+  {
+    "name_ja": "ルクセンブルク",
+    "name": "Luxembourg",
+    "iso_a2": "LU",
+    "tld": [
+      ".lu"
+    ]
+  },
+  {
+    "name_ja": "ルワンダ",
+    "name": "Rwanda",
+    "iso_a2": "RW",
+    "tld": [
+      ".rw"
+    ]
+  },
+  {
+    "name_ja": "レソト",
+    "name": "Lesotho",
+    "iso_a2": "LS",
+    "tld": [
+      ".ls"
+    ]
+  },
+  {
+    "name_ja": "レバノン",
+    "name": "Lebanon",
+    "iso_a2": "LB",
+    "tld": [
+      ".lb"
+    ]
+  },
+  {
+    "name_ja": "ロシア",
+    "name": "Russia",
+    "iso_a2": "RU",
+    "tld": [
+      ".ru"
+    ]
+  },
+  {
+    "name_ja": "西サハラ",
+    "name": "W. Sahara",
+    "iso_a2": "EH",
+    "tld": [
+      ".eh"
+    ]
+  },
+  {
+    "name_ja": "赤道ギニア",
+    "name": "Eq. Guinea",
+    "iso_a2": "GQ",
+    "tld": [
+      ".gq"
+    ]
+  },
+  {
+    "name_ja": "大韓民国",
+    "name": "South Korea",
+    "iso_a2": "KR",
+    "tld": [
+      ".kr"
+    ]
+  },
+  {
+    "name_ja": "中央アフリカ共和国",
+    "name": "Central African Rep.",
+    "iso_a2": "CF",
+    "tld": [
+      ".cf"
+    ]
+  },
+  {
+    "name_ja": "中華人民共和国",
+    "name": "China",
+    "iso_a2": "CN",
+    "tld": [
+      ".cn"
+    ]
+  },
+  {
+    "name_ja": "中華民国",
+    "name": "Taiwan",
+    "iso_a2": "CN-TW",
+    "tld": [
+      ".tw"
+    ]
+  },
+  {
+    "name_ja": "朝鮮民主主義人民共和国",
+    "name": "North Korea",
+    "iso_a2": "KP",
+    "tld": [
+      ".kp"
+    ]
+  },
+  {
+    "name_ja": "東ティモール",
+    "name": "Timor-Leste",
+    "iso_a2": "TL",
+    "tld": [
+      ".tl"
+    ]
+  },
+  {
+    "name_ja": "南アフリカ共和国",
+    "name": "South Africa",
+    "iso_a2": "ZA",
+    "tld": [
+      ".za"
+    ]
+  },
+  {
+    "name_ja": "南スーダン",
+    "name": "S. Sudan",
+    "iso_a2": "SS",
+    "tld": [
+      ".ss"
+    ]
+  },
+  {
+    "name_ja": "南極大陸",
+    "name": "Antarctica",
+    "iso_a2": "AQ",
+    "tld": [
+      ".aq"
+    ]
+  },
+  {
+    "name_ja": "日本",
+    "name": "Japan",
+    "iso_a2": "JP",
+    "tld": [
+      ".jp"
+    ]
+  },
+  {
+    "name_ja": "北マケドニア",
+    "name": "North Macedonia",
+    "iso_a2": "MK",
+    "tld": [
+      ".mk"
+    ]
+  }
+]
