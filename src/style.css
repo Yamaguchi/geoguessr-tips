@@ -45,10 +45,24 @@ body {
   color: var(--text-primary);
 }
 
-main {
-  max-width: 960px;
-  margin: 0 auto;
+.page {
   padding: 24px 16px 48px;
+}
+
+.page-header {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+main {
+  flex: 0 0 960px;
 }
 
 h1 {
@@ -58,12 +72,12 @@ h1 {
 
 .lede {
   color: var(--text-secondary);
-  margin-top: 0;
-  margin-bottom: 24px;
+  margin: 0;
 }
 
 .map-card {
   position: relative;
+  width: 960px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -72,7 +86,7 @@ h1 {
 
 #world-map {
   width: 100%;
-  height: auto;
+  height: 500px;
   display: block;
 }
 
@@ -106,7 +120,17 @@ h1 {
 }
 
 .country-panel {
-  margin-top: 16px;
+  flex: 1 1 260px;
+  min-width: 160px;
+  max-width: 260px;
+  max-height: 834px;
+  overflow-y: auto;
+  position: sticky;
+  top: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
 }
 
 .country-panel h2 {
@@ -114,22 +138,53 @@ h1 {
   margin: 0 0 8px;
 }
 
-.country-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  gap: 8px;
+.country-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .country-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  font: inherit;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 8px 10px;
   font-size: 0.8125rem;
-  text-align: center;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+}
+
+.country-cell .country-name {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.country-flag {
+  width: 20px;
+  height: 15px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.country-cell:hover {
+  background: var(--page-bg);
+}
+
+.country-cell.selected {
+  border-color: var(--text-primary);
+  font-weight: 600;
 }
 
 .legend {
@@ -154,4 +209,106 @@ h1 {
   height: 12px;
   border-radius: 3px;
   flex-shrink: 0;
+}
+
+.tips-panel {
+  flex: 1 1 200px;
+  min-width: 200px;
+  position: sticky;
+  top: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.tips-panel h2 {
+  font-size: 1.125rem;
+  margin: 0 0 12px;
+}
+
+.tips-country-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tips-country-header[hidden] {
+  display: none;
+}
+
+.tips-country-flag {
+  width: 48px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.tips-country-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tips-country-name {
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.tips-country-tld {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.tips-placeholder {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tip-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.tip-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: var(--page-bg);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-bottom: 6px;
+}
+
+.tip-card h3 {
+  font-size: 0.9375rem;
+  margin: 0 0 6px;
+}
+
+.tip-body {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.tip-body p {
+  margin: 0 0 8px;
+}
+
+.tip-body p:last-child {
+  margin-bottom: 0;
 }
