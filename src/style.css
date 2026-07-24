@@ -63,6 +63,7 @@ h1 {
 }
 
 .map-card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -78,6 +79,57 @@ h1 {
 .continent-path {
   stroke: var(--surface);
   stroke-width: 0.5;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.continent-path:hover {
+  filter: brightness(0.9);
+}
+
+.back-button {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 1;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: var(--page-bg);
+}
+
+.country-panel {
+  margin-top: 16px;
+}
+
+.country-panel h2 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 8px;
+}
+
+.country-cell {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.8125rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .legend {
