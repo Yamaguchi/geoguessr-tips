@@ -328,14 +328,18 @@ function showCountryGrid(continent: string) {
 }
 
 svg.addEventListener("click", (event) => {
-  const target = (event.target as Element).closest("path.continent-path");
+  const target = (event.target as Element).closest<SVGPathElement>("path.continent-path");
   if (!target) return;
-  const idx = Number((target as HTMLElement).dataset.idx);
+  const idx = Number(target.dataset.idx);
   const feature = features[idx];
   if (!feature) return;
   const continent = resolveContinent(feature.properties.continent);
   zoomToContinent(continent);
   showCountryGrid(continent);
+
+  const cellEl = countryGrid.querySelector<HTMLElement>(`.country-cell[data-idx="${idx}"]`);
+  selectCountry(feature, target, cellEl);
+  cellEl?.scrollIntoView({ block: "nearest" });
 });
 
 countryGrid.addEventListener("click", (event) => {
