@@ -4,6 +4,7 @@ category: 道路標識
 locations:
   - continent: ヨーロッパ
     country: ポルトガル
+street_view: "https://www.google.com/maps/embed?pb=!4v1784995813253!6m8!1m7!1sAYgbtGUlECbi_pERFOUAcQ!2m2!1d41.20107732710107!2d-7.087318964608357!3f136.9837191431242!4f6.876097190308499!5f0.7820865974627469"
 tags:
   - 道路標識
   - 道路標識/黒地黄色矢印
