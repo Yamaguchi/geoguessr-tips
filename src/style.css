@@ -172,7 +172,7 @@ h1 {
   flex: 1 1 260px;
   min-width: 160px;
   max-width: 260px;
-  max-height: 834px;
+  max-height: 700px;
   overflow-y: auto;
   position: sticky;
   top: 24px;
@@ -263,6 +263,8 @@ h1 {
 .tips-panel {
   flex: 1 1 200px;
   min-width: 200px;
+  max-height: 700px;
+  overflow-y: auto;
   position: sticky;
   top: 24px;
   background: var(--surface);
@@ -401,4 +403,26 @@ h1 {
 
 .tip-body > :last-child {
   margin-bottom: 0;
+}
+
+.tip-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.tip-tag {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.6875rem;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
+.tip-tag:hover {
+  background: var(--page-bg);
+  color: var(--text-primary);
 }

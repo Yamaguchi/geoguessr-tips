@@ -207,6 +207,18 @@ function renderTipCard(tip: Tip, options?: { showLocation?: boolean }): string {
   const location = options?.showLocation
     ? `<p class="tip-location">${escapeHtml(tip.locations.map((loc) => loc.country ?? loc.continent).join("・"))}</p>`
     : "";
+  const tags = tip.tags?.length
+    ? `
+      <div class="tip-tags">
+        ${tip.tags
+          .map(
+            (tag) =>
+              `<button type="button" class="tip-tag" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`,
+          )
+          .join("")}
+      </div>
+    `
+    : "";
   return `
     <li class="tip-card">
       <span class="tip-category">${escapeHtml(tip.category)}</span>
@@ -215,6 +227,7 @@ function renderTipCard(tip: Tip, options?: { showLocation?: boolean }): string {
       ${image}
       ${streetView}
       <div class="tip-body">${body}</div>
+      ${tags}
     </li>
   `;
 }
@@ -383,6 +396,15 @@ countryGrid.addEventListener("click", (event) => {
   if (!feature) return;
   const pathEl = svg.querySelector<SVGPathElement>(`path.continent-path[data-idx="${idx}"]`);
   selectCountry(feature, pathEl, target);
+});
+
+tipsList.addEventListener("click", (event) => {
+  const target = (event.target as Element).closest<HTMLButtonElement>(".tip-tag");
+  if (!target) return;
+  const tag = target.dataset.tag;
+  if (!tag) return;
+  tagSearchInput.value = tag;
+  runTagSearch(tag);
 });
 
 backButton.addEventListener("click", () => {
