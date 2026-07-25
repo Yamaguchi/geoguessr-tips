@@ -4,6 +4,7 @@ category: 電柱
 locations:
   - continent: 南アメリカ
     country: ブラジル
+street_view: "https://www.google.com/maps/embed?pb=!4v1784996135898!6m8!1m7!1s7bECIMpaRGuF-wHzysEDfQ!2m2!1d-24.17438189447604!2d-54.08935816863751!3f118.08481497699553!4f10.081534340208904!5f1.2700415803684963"
 tags:
   - 電柱
   - 電柱/梯子状
