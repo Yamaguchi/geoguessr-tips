@@ -12,12 +12,16 @@ export interface Tip {
   locations: TipLocation[];
   body: string;
   file: string;
+  image?: string;
+  imageCredit?: string;
 }
 
 interface TipFrontmatter {
   title?: string;
   category?: string;
   locations?: TipLocation[];
+  image?: string;
+  image_credit?: string;
 }
 
 const FRONTMATTER_RE = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
@@ -36,7 +40,15 @@ function parseTip(file: string, raw: string): Tip | null {
   const data = loadYaml(frontmatterYaml) as TipFrontmatter | undefined;
   if (!data?.title || !data.category || !Array.isArray(data.locations)) return null;
 
-  return { title: data.title, category: data.category, locations: data.locations, body: body.trim(), file };
+  return {
+    title: data.title,
+    category: data.category,
+    locations: data.locations,
+    body: body.trim(),
+    file,
+    image: data.image,
+    imageCredit: data.image_credit,
+  };
 }
 
 export const tips: Tip[] = Object.entries(rawTipFiles)

@@ -223,10 +223,17 @@ function escapeHtml(text: string): string {
 
 function renderTipCard(tip: Tip): string {
   const body = marked.parse(tip.body, { async: false });
+  const image = tip.image
+    ? `
+      <img class="tip-image" src="${import.meta.env.BASE_URL}tips-images/${tip.image}" alt="" loading="lazy" />
+      ${tip.imageCredit ? `<p class="tip-image-credit">${escapeHtml(tip.imageCredit)}</p>` : ""}
+    `
+    : "";
   return `
     <li class="tip-card">
       <span class="tip-category">${escapeHtml(tip.category)}</span>
       <h3>${escapeHtml(tip.title)}</h3>
+      ${image}
       <div class="tip-body">${body}</div>
     </li>
   `;

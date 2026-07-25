@@ -56,14 +56,17 @@ locations:
   - continent: 北アメリカ
     country: アメリカ
     area: アメリカ西海岸部
+image: usa-westcoast-pole.jpg
+image_credit: "作者名, ライセンス, via Wikimedia Commons"
 ---
-本文（詳細説明、必要に応じて画像参照）
+本文（判別方法にフォーカスした簡潔な説明）
 ```
 
 - `category`: Tip軸の値。単一。
 - `locations`: ロケーション軸の値。配列。各要素は`continent`/`country`/`area`を持ち、該当しない階層は省略可。
 - `area`には州・県名、地方名、カスタム地域名、方角区分のいずれかを指定する（同列の値として扱う）。
-- 画像を使う場合は本文中でMarkdown画像記法により`images/`配下（公開用に整理したもの）を参照する。
+- `image`/`image_credit`は任意。画像はWikimedia CommonsのCCライセンス画像から取得し、`public/tips-images/`配下にファイル名のみで配置する（パスの組み立てはアプリ側で行う）。`image_credit`にはCCライセンスが要求する著作者表示を記載する（例: "作者名, CC BY-SA 3.0, via Wikimedia Commons"）。詳細は`public/tips-images/README.md`参照。
+- 本文中に出典URLは記録しない（Tip作成時にWeb検索で照合するのみ）。
 
 ### エリア定義ファイル
 
