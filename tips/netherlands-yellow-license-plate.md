@@ -4,6 +4,7 @@ category: ナンバープレート
 locations:
   - continent: ヨーロッパ
     country: オランダ
+street_view: "https://www.google.com/maps/embed?pb=!4v1784995519035!6m8!1m7!1sZpwyKzu44hFGLEUgcaCQwA!2m2!1d52.05610601428649!2d4.273142543089335!3f156.99815373963193!4f-14.995746465050331!5f0.7820865974627469"
 tags:
   - ナンバープレート
   - ナンバープレート/黄色
