@@ -4,5 +4,6 @@ category: 言語
 locations:
   - continent: アジア
     country: ラオス
+street_view: "https://www.google.com/maps/embed?pb=!4v1784980291613!6m8!1m7!1sOrIhxFC7Q9Y3lQRaaFLqNA!2m2!1d17.97054869658239!2d102.6185551656414!3f311.1150093213143!4f13.819489349833006!5f3.325193203789971"
 ---
 タイ文字に似た丸みのある曲線文字だが、タイ文字より装飾（頭の輪）が少なく簡素な字形であればラオスにほぼ確定する。
