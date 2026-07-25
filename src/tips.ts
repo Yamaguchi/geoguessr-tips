@@ -14,6 +14,7 @@ export interface Tip {
   file: string;
   image?: string;
   imageCredit?: string;
+  streetView?: string;
 }
 
 interface TipFrontmatter {
@@ -22,6 +23,7 @@ interface TipFrontmatter {
   locations?: TipLocation[];
   image?: string;
   image_credit?: string;
+  street_view?: string;
 }
 
 const FRONTMATTER_RE = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
@@ -48,6 +50,7 @@ function parseTip(file: string, raw: string): Tip | null {
     file,
     image: data.image,
     imageCredit: data.image_credit,
+    streetView: data.street_view,
   };
 }
 

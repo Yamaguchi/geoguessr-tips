@@ -315,6 +315,14 @@ h1 {
   margin: 0 0 8px;
 }
 
+.tip-street-view {
+  display: block;
+  width: 100%;
+  height: 220px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
 .tip-body {
   font-size: 0.8125rem;
   color: var(--text-secondary);

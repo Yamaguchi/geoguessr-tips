@@ -229,11 +229,18 @@ function renderTipCard(tip: Tip): string {
       ${tip.imageCredit ? `<p class="tip-image-credit">${escapeHtml(tip.imageCredit)}</p>` : ""}
     `
     : "";
+  const streetView =
+    tip.streetView && tip.streetView.startsWith("https://www.google.com/maps/embed")
+      ? `
+      <iframe class="tip-street-view" src="${escapeHtml(tip.streetView)}" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    `
+      : "";
   return `
     <li class="tip-card">
       <span class="tip-category">${escapeHtml(tip.category)}</span>
       <h3>${escapeHtml(tip.title)}</h3>
       ${image}
+      ${streetView}
       <div class="tip-body">${body}</div>
     </li>
   `;
