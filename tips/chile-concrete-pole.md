@@ -4,6 +4,7 @@ category: 電柱
 locations:
   - continent: 南アメリカ
     country: チリ
+street_view: "https://www.google.com/maps/embed?pb=!4v1784996979362!6m8!1m7!1s8ZBVvRgmaYgG6fC8BdldCg!2m2!1d-33.48991643195567!2d-70.59352017991571!3f85.80539701157683!4f11.010234469323152!5f0.7820865974627469"
 tags:
   - 電柱
   - 電柱/側面くぼみ

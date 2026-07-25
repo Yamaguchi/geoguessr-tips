@@ -4,6 +4,7 @@ category: ナンバープレート
 locations:
   - continent: アジア
     country: ネパール
+street_view: "https://www.google.com/maps/embed?pb=!4v1784996582661!6m8!1m7!1sRAAXO3omKOgfHlG3z3g-Ow!2m2!1d27.68692632748033!2d85.35008737734333!3f356.4285058393799!4f-1.5288719368508907!5f1.2443965838156614"
 tags:
   - ナンバープレート
   - ナンバープレート/色分け
