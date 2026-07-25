@@ -310,8 +310,10 @@ function zoomToContinent(continent: string) {
   svg.setAttribute("viewBox", `${x0 - pad} ${y0 - pad} ${w + pad * 2} ${h + pad * 2}`);
   // 大陸ズームはアフリカ・南アメリカ等、南北に細長い大陸を切らずに収めるため縦を拡張し、
   // 切り取らず全体が収まるようmeetに切り替える
+  // meetは全体を収めるだけでトリムしないため、世界全体表示用の500pxに縛られず
+  // コンテナ全体（700px）まで拡大して見やすくする
   svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
-  svg.style.height = "800px";
+  svg.style.height = "100%";
   backButton.hidden = false;
 }
 
