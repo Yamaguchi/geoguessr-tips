@@ -176,61 +176,7 @@ function clearTagHighlights() {
   tagHighlightedPathEls = [];
 }
 
-function parseRgb(value: string): [number, number, number] | null {
-  const match = value.match(/rgba?\(([^)]+)\)/);
-  if (!match) return null;
-  const [r, g, b] = match[1].split(",").map((v) => parseFloat(v));
-  return [r, g, b];
-}
-
-function rgbToHsl(r: number, g: number, b: number): [number, number, number] {
-  r /= 255;
-  g /= 255;
-  b /= 255;
-  const max = Math.max(r, g, b);
-  const min = Math.min(r, g, b);
-  const l = (max + min) / 2;
-  const d = max - min;
-  if (d === 0) return [0, 0, l];
-  const s = d / (1 - Math.abs(2 * l - 1));
-  let h: number;
-  switch (max) {
-    case r:
-      h = ((g - b) / d) % 6;
-      break;
-    case g:
-      h = (b - r) / d + 2;
-      break;
-    default:
-      h = (r - g) / d + 4;
-  }
-  h *= 60;
-  if (h < 0) h += 360;
-  return [h, s, l];
-}
-
-function hslToRgb(h: number, s: number, l: number): [number, number, number] {
-  const c = (1 - Math.abs(2 * l - 1)) * s;
-  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
-  const m = l - c / 2;
-  let [r, g, b] = [0, 0, 0];
-  if (h < 60) [r, g, b] = [c, x, 0];
-  else if (h < 120) [r, g, b] = [x, c, 0];
-  else if (h < 180) [r, g, b] = [0, c, x];
-  else if (h < 240) [r, g, b] = [0, x, c];
-  else if (h < 300) [r, g, b] = [x, 0, c];
-  else [r, g, b] = [c, 0, x];
-  return [Math.round((r + m) * 255), Math.round((g + m) * 255), Math.round((b + m) * 255)];
-}
-
-function complementaryFill(pathEl: SVGPathElement): string | null {
-  const rgb = parseRgb(getComputedStyle(pathEl).fill);
-  if (!rgb) return null;
-  const [h, s, l] = rgbToHsl(...rgb);
-  const brighterL = l + (1 - l) * 0.4;
-  const [r2, g2, b2] = hslToRgb((h + 180) % 360, s, brighterL);
-  return `rgb(${r2}, ${g2}, ${b2})`;
-}
+const HIGHLIGHT_FILL = "var(--highlight)";
 
 function escapeHtml(text: string): string {
   return text
@@ -276,10 +222,7 @@ function renderTipCard(tip: Tip, options?: { showLocation?: boolean }): string {
 function selectCountry(feature: CountryFeature, pathEl: SVGPathElement | null, cellEl: HTMLElement | null) {
   clearTagHighlights();
   if (selectedPathEl) selectedPathEl.style.fill = selectedPathEl.dataset.baseFill ?? selectedPathEl.style.fill;
-  if (pathEl) {
-    const complement = complementaryFill(pathEl);
-    if (complement) pathEl.style.fill = complement;
-  }
+  if (pathEl) pathEl.style.fill = HIGHLIGHT_FILL;
   selectedPathEl = pathEl;
 
   selectedCellEl?.classList.remove("selected");
@@ -392,8 +335,7 @@ function runTagSearch(tag: string) {
     if (!found) continue;
     const pathEl = svg.querySelector<SVGPathElement>(`path.continent-path[data-idx="${found.idx}"]`);
     if (pathEl) {
-      const complement = complementaryFill(pathEl);
-      if (complement) pathEl.style.fill = complement;
+      pathEl.style.fill = HIGHLIGHT_FILL;
       tagHighlightedPathEls.push(pathEl);
     }
     entries.push({ feature: found.feature, idx: found.idx, name });
