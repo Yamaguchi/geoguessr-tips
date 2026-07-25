@@ -305,10 +305,21 @@ h1 {
   color: var(--text-secondary);
 }
 
-.tip-body p {
+.tip-body p,
+.tip-body ul,
+.tip-body ol {
   margin: 0 0 8px;
 }
 
-.tip-body p:last-child {
+.tip-body ul,
+.tip-body ol {
+  padding-left: 1.25em;
+}
+
+.tip-body li {
+  margin-bottom: 2px;
+}
+
+.tip-body > :last-child {
   margin-bottom: 0;
 }

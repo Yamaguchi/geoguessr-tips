@@ -1,4 +1,5 @@
 import { geoNaturalEarth1, geoPath } from "d3-geo";
+import { marked } from "marked";
 import "./style.css";
 import worldData from "./data/world-110m.json";
 import { CONTINENT_STYLES, continentSlug, resolveContinent } from "./continents";
@@ -221,15 +222,12 @@ function escapeHtml(text: string): string {
 }
 
 function renderTipCard(tip: Tip): string {
-  const paragraphs = tip.body
-    .split(/\n{2,}/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join("");
+  const body = marked.parse(tip.body, { async: false });
   return `
     <li class="tip-card">
       <span class="tip-category">${escapeHtml(tip.category)}</span>
       <h3>${escapeHtml(tip.title)}</h3>
-      <div class="tip-body">${paragraphs}</div>
+      <div class="tip-body">${body}</div>
     </li>
   `;
 }
