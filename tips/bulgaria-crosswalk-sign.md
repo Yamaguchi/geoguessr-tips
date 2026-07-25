@@ -6,5 +6,8 @@ locations:
     country: ブルガリア
 image: bulgaria-crosswalk-sign.svg
 image_credit: "มองโกเลีย๔๔, CC BY-SA 4.0, via Wikimedia Commons"
+tags:
+  - 横断歩道
+  - 横断歩道/帽子の人物
 ---
 青地に白三角の歩行者標識で、人物が帽子をかぶった姿で描かれているのが特徴。オーストリア・チェコ・スロバキアにも帽子デザインがあるが、ヨーロッパ全体では少数派。

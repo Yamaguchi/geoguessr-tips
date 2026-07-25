@@ -124,6 +124,48 @@ h1 {
   background: var(--page-bg);
 }
 
+.tag-search {
+  margin-top: 12px;
+}
+
+.tag-search-label {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.tag-search-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  max-width: 420px;
+}
+
+.tag-search-input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.tag-search-clear {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.tag-search-clear:hover {
+  background: var(--page-bg);
+}
+
 .country-panel {
   flex: 1 1 260px;
   min-width: 160px;
@@ -303,6 +345,13 @@ h1 {
 .tip-card h3 {
   font-size: 0.9375rem;
   margin: 0 0 6px;
+}
+
+.tip-location {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0 0 6px;
+  font-weight: 600;
 }
 
 .tip-image {

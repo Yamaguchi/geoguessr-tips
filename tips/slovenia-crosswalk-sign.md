@@ -6,5 +6,8 @@ locations:
     country: スロベニア
 image: slovenia-crosswalk-sign.svg
 image_credit: "Government of Slovenia, public domain, via Wikimedia Commons"
+tags:
+  - 横断歩道
+  - 横断歩道/枠なし
 ---
 青地に白三角の歩行者標識で、背景が濃い紺色。正方形の外周に白枠がなく、人物は片腕を前方に伸ばした動きのあるポーズ。

@@ -18,5 +18,8 @@ locations:
     country: ジンバブエ
 image: sadc-crosswalk-sign.svg
 image_credit: "SADC-RTSM, public domain, via Wikimedia Commons"
+tags:
+  - 横断歩道
+  - 横断歩道/腕を曲げたポーズ
 ---
 SADC（南部アフリカ開発共同体）加盟国で共通の歩行者標識。人物が片腕を体の前で曲げた特徴的なポーズで、ヨーロッパ式の標識とは意匠が異なる。この標識だけでは加盟国内の特定はできず、他の要素と組み合わせて絞り込む。

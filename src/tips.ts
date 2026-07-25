@@ -10,6 +10,7 @@ export interface Tip {
   title: string;
   category: string;
   locations: TipLocation[];
+  tags?: string[];
   body: string;
   file: string;
   image?: string;
@@ -21,6 +22,7 @@ interface TipFrontmatter {
   title?: string;
   category?: string;
   locations?: TipLocation[];
+  tags?: string[];
   image?: string;
   image_credit?: string;
   street_view?: string;
@@ -46,6 +48,7 @@ function parseTip(file: string, raw: string): Tip | null {
     title: data.title,
     category: data.category,
     locations: data.locations,
+    tags: data.tags ?? [],
     body: body.trim(),
     file,
     image: data.image,
@@ -64,4 +67,16 @@ export function tipsForCountry(continent: string, country: string): Tip[] {
       (loc) => loc.country === country || (!loc.country && loc.continent === continent),
     ),
   );
+}
+
+export function allTags(): string[] {
+  const unique = new Set<string>();
+  for (const tip of tips) {
+    for (const tag of tip.tags ?? []) unique.add(tag);
+  }
+  return [...unique].sort((a, b) => a.localeCompare(b, "ja"));
+}
+
+export function tipsForTag(tag: string): Tip[] {
+  return tips.filter((tip) => tip.tags?.includes(tag));
 }

@@ -6,5 +6,8 @@ locations:
     country: フィンランド
 image: finland-crosswalk-sign.svg
 image_credit: "Republic of Finland (Väylävirasto), public domain, via Wikimedia Commons"
+tags:
+  - 横断歩道
+  - 横断歩道/太い白枠
 ---
 青地に白三角の歩行者標識で、正方形の外周に太めの白枠が入り角の丸みも強い。フランスと枠の太さが近いが、人物のポーズで見分ける。

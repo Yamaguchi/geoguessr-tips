@@ -3,7 +3,7 @@ import { marked } from "marked";
 import "./style.css";
 import worldData from "./data/world-110m.json";
 import { CONTINENT_STYLES, continentSlug, resolveContinent } from "./continents";
-import { tipsForCountry, type Tip } from "./tips";
+import { allTags, tipsForCountry, tipsForTag, type Tip } from "./tips";
 import { flagUrlForCountry, tldsForCountry } from "./countryData";
 
 interface CountryFeature {
@@ -20,6 +20,14 @@ app.innerHTML = `
     <header class="page-header">
       <h1>GeoGuessr Tips</h1>
       <p class="lede">GeoGuessrで役立つTipsをまとめていく。</p>
+      <div class="tag-search">
+        <label for="tag-search-input" class="tag-search-label">タグで検索</label>
+        <div class="tag-search-row">
+          <input type="text" id="tag-search-input" class="tag-search-input" list="tag-options" placeholder="例: ナンバープレート/黄色" autocomplete="off" />
+          <datalist id="tag-options"></datalist>
+          <button type="button" id="tag-search-clear" class="tag-search-clear" hidden>✕</button>
+        </div>
+      </div>
     </header>
     <div class="layout">
       <main>
@@ -65,6 +73,7 @@ svg.setAttribute("aria-label", "大陸別に色分けした世界地図。クリ
 
 const continentGroups = new Map<string, CountryFeature[]>();
 const continentBounds = new Map<string, [number, number, number, number]>();
+const featureByCountryName = new Map<string, { feature: CountryFeature; idx: number }>();
 
 // ロシア東部やフィジーの日付変更線またぎなど遠隔領域が全体境界を歪めるため、
 // ヨーロッパとオセアニアは経緯度矩形で明示的にズーム範囲を指定する
@@ -131,6 +140,8 @@ features.forEach((feature, idx) => {
   const group = continentGroups.get(continent);
   if (group) group.push(feature);
   else continentGroups.set(continent, [feature]);
+
+  featureByCountryName.set(feature.properties.name_ja || feature.properties.name, { feature, idx });
 });
 
 document.querySelector<HTMLDivElement>("#map-card")!.appendChild(svg);
@@ -153,9 +164,17 @@ const tipsCountryName = document.querySelector<HTMLSpanElement>("#tips-country-n
 const tipsCountryTld = document.querySelector<HTMLSpanElement>("#tips-country-tld")!;
 const tipsPlaceholder = document.querySelector<HTMLParagraphElement>("#tips-placeholder")!;
 const tipsList = document.querySelector<HTMLUListElement>("#tips-list")!;
+const tagSearchInput = document.querySelector<HTMLInputElement>("#tag-search-input")!;
+const tagSearchClearButton = document.querySelector<HTMLButtonElement>("#tag-search-clear")!;
 
 let selectedPathEl: SVGPathElement | null = null;
 let selectedCellEl: HTMLElement | null = null;
+let tagHighlightedPathEls: SVGPathElement[] = [];
+
+function clearTagHighlights() {
+  for (const el of tagHighlightedPathEls) el.style.fill = el.dataset.baseFill ?? el.style.fill;
+  tagHighlightedPathEls = [];
+}
 
 function parseRgb(value: string): [number, number, number] | null {
   const match = value.match(/rgba?\(([^)]+)\)/);
@@ -221,7 +240,11 @@ function escapeHtml(text: string): string {
     .replace(/"/g, "&quot;");
 }
 
-function renderTipCard(tip: Tip): string {
+document.querySelector<HTMLDataListElement>("#tag-options")!.innerHTML = allTags()
+  .map((tag) => `<option value="${escapeHtml(tag)}"></option>`)
+  .join("");
+
+function renderTipCard(tip: Tip, options?: { showLocation?: boolean }): string {
   const body = marked.parse(tip.body, { async: false });
   const image = tip.image
     ? `
@@ -235,10 +258,14 @@ function renderTipCard(tip: Tip): string {
       <iframe class="tip-street-view" src="${escapeHtml(tip.streetView)}" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     `
       : "";
+  const location = options?.showLocation
+    ? `<p class="tip-location">${escapeHtml(tip.locations.map((loc) => loc.country ?? loc.continent).join("・"))}</p>`
+    : "";
   return `
     <li class="tip-card">
       <span class="tip-category">${escapeHtml(tip.category)}</span>
       <h3>${escapeHtml(tip.title)}</h3>
+      ${location}
       ${image}
       ${streetView}
       <div class="tip-body">${body}</div>
@@ -247,6 +274,7 @@ function renderTipCard(tip: Tip): string {
 }
 
 function selectCountry(feature: CountryFeature, pathEl: SVGPathElement | null, cellEl: HTMLElement | null) {
+  clearTagHighlights();
   if (selectedPathEl) selectedPathEl.style.fill = selectedPathEl.dataset.baseFill ?? selectedPathEl.style.fill;
   if (pathEl) {
     const complement = complementaryFill(pathEl);
@@ -283,7 +311,7 @@ function selectCountry(feature: CountryFeature, pathEl: SVGPathElement | null, c
     tipsList.innerHTML = "";
   } else {
     tipsList.hidden = false;
-    tipsList.innerHTML = matched.map(renderTipCard).join("");
+    tipsList.innerHTML = matched.map((tip) => renderTipCard(tip)).join("");
   }
 }
 
@@ -317,6 +345,13 @@ function zoomToContinent(continent: string) {
   backButton.hidden = false;
 }
 
+function resetMapView() {
+  svg.setAttribute("viewBox", worldViewBox);
+  svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
+  svg.style.height = "";
+  backButton.hidden = true;
+}
+
 function showCountryGrid(continent: string) {
   const style = CONTINENT_STYLES[continent];
   const list = continentGroups.get(continent) ?? [];
@@ -334,6 +369,53 @@ function showCountryGrid(continent: string) {
     .join("");
   countryPanel.hidden = false;
   clearCountrySelection();
+}
+
+function runTagSearch(tag: string) {
+  const matched = tipsForTag(tag);
+  if (matched.length === 0) return;
+
+  clearCountrySelection();
+  clearTagHighlights();
+  resetMapView();
+
+  const countryNames = new Set<string>();
+  for (const tip of matched) {
+    for (const loc of tip.locations) {
+      if (loc.country) countryNames.add(loc.country);
+    }
+  }
+
+  const entries: { feature: CountryFeature; idx: number; name: string }[] = [];
+  for (const name of countryNames) {
+    const found = featureByCountryName.get(name);
+    if (!found) continue;
+    const pathEl = svg.querySelector<SVGPathElement>(`path.continent-path[data-idx="${found.idx}"]`);
+    if (pathEl) {
+      const complement = complementaryFill(pathEl);
+      if (complement) pathEl.style.fill = complement;
+      tagHighlightedPathEls.push(pathEl);
+    }
+    entries.push({ feature: found.feature, idx: found.idx, name });
+  }
+  entries.sort((a, b) => a.name.localeCompare(b.name, "ja"));
+
+  countryPanelTitle.textContent = `「${tag}」に一致する国（${entries.length}）`;
+  countryGrid.innerHTML = entries
+    .map(({ idx, name }) => {
+      const flagUrl = flagUrlForCountry(name);
+      const flagImg = flagUrl ? `<img class="country-flag" src="${flagUrl}" alt="" />` : "";
+      return `<li><button type="button" class="country-cell" data-idx="${idx}">${flagImg}<span class="country-name">${escapeHtml(name)}</span></button></li>`;
+    })
+    .join("");
+  countryPanel.hidden = false;
+
+  tipsCountryHeader.hidden = true;
+  tipsPlaceholder.hidden = true;
+  tipsList.hidden = false;
+  tipsList.innerHTML = matched.map((tip) => renderTipCard(tip, { showLocation: true })).join("");
+
+  tagSearchClearButton.hidden = false;
 }
 
 svg.addEventListener("click", (event) => {
@@ -362,10 +444,31 @@ countryGrid.addEventListener("click", (event) => {
 });
 
 backButton.addEventListener("click", () => {
-  svg.setAttribute("viewBox", worldViewBox);
-  svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
-  svg.style.height = "";
-  backButton.hidden = true;
+  resetMapView();
   countryPanel.hidden = true;
   clearCountrySelection();
+});
+
+const tagSet = new Set(allTags());
+
+tagSearchInput.addEventListener("input", () => {
+  const value = tagSearchInput.value.trim();
+  if (value === "") {
+    tagSearchClearButton.hidden = true;
+    clearTagHighlights();
+    countryPanel.hidden = true;
+    clearCountrySelection();
+    resetMapView();
+    return;
+  }
+  if (tagSet.has(value)) runTagSearch(value);
+});
+
+tagSearchClearButton.addEventListener("click", () => {
+  tagSearchInput.value = "";
+  tagSearchClearButton.hidden = true;
+  clearTagHighlights();
+  countryPanel.hidden = true;
+  clearCountrySelection();
+  resetMapView();
 });
