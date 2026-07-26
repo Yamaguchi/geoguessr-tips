@@ -4,6 +4,7 @@ category: ボラード
 locations:
   - continent: ヨーロッパ
     country: フランス
+street_view: "https://www.google.com/maps/embed?pb=!4v1785083140019!6m8!1m7!1sKZ6HeNMPCTkcoYSAex4WOQ!2m2!1d45.85640908794319!2d2.760988443028956!3f29.304053394458144!4f-6.248218131511962!5f1.9552552984170468"
 tags:
   - ボラード
   - ボラード/その他
