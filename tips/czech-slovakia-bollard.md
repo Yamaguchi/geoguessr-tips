@@ -6,6 +6,7 @@ locations:
     country: チェコ
   - continent: ヨーロッパ
     country: スロバキア
+street_view: "https://www.google.com/maps/embed?pb=!4v1785058827233!6m8!1m7!1sAuMNBTinLbSAgDYQhHt_Jg!2m2!1d50.13138272791532!2d14.63223915430238!3f91.51829674453315!4f-15.530900096560714!5f0.7820865974627469"
 tags:
   - ボラード
   - ボラード/黒白
