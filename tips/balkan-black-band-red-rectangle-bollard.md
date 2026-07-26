@@ -10,6 +10,7 @@ locations:
     country: ブルガリア
   - continent: ヨーロッパ
     country: ハンガリー
+street_view: "https://www.google.com/maps/embed?pb=!4v1785083569365!6m8!1m7!1sr9xYaj0xJmUXBB1tuqjPVw!2m2!1d42.14640940792363!2d24.86488821158624!3f115.24501079586764!4f-13.498031359703575!5f3.165778227218463"
 tags:
   - ボラード
   - ボラード/白地
