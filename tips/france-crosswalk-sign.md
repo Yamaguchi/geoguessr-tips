@@ -8,6 +8,6 @@ image: france-crosswalk-sign.svg
 image_credit: "Roulex 45, CC BY-SA 3.0, via Wikimedia Commons"
 tags:
   - 横断歩道
-  - 横断歩道/太い白枠
+  - 横断歩道/枠線白
 ---
 青地に白三角の歩行者標識で、正方形の外周に太めの白枠が入る。フィンランドと枠の太さが近いが、人物は片腕を前方の膝付近まで伸ばすポーズで見分ける。

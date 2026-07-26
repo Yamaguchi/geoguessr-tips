@@ -9,6 +9,5 @@ image_credit: "Michal Klajban, CC BY-SA 4.0, via Wikimedia Commons"
 tags:
   - 道路標識
   - 道路標識/動物注意
-  - 道路標識/動物注意/黄色地赤枠
 ---
 ヘラジカ等の動物注意三角標識は黄色地に赤枠。同色のフィンランドとは、ゆずれ標識の縁取り（フィンランドのみ二重）で区別する。

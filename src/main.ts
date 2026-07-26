@@ -3,7 +3,7 @@ import { marked } from "marked";
 import "./style.css";
 import worldData from "./data/world-110m.json";
 import { CONTINENT_STYLES, continentSlug, resolveContinent } from "./continents";
-import { allTags, CATEGORY_ORDER, countriesForTagSelection, tipsForCountry, type Tip } from "./tips";
+import { allTags, CATEGORY_ORDER, SUBCATEGORY_ORDER, countriesForTagSelection, tipsForCountry, type Tip } from "./tips";
 import { flagUrlForCountry, tldsForCountry } from "./countryData";
 
 interface CountryFeature {
@@ -194,24 +194,31 @@ function tagCategory(tag: string): string {
   return tag.split("/")[0];
 }
 
-const tagsByCategory = new Map<string, string[]>();
+const usedTagsByCategory = new Map<string, string[]>();
 for (const tag of allTags()) {
   const category = tagCategory(tag);
-  const list = tagsByCategory.get(category) ?? [];
+  const list = usedTagsByCategory.get(category) ?? [];
   list.push(tag);
-  tagsByCategory.set(category, list);
+  usedTagsByCategory.set(category, list);
 }
 
-function categoryOrderIndex(category: string): number {
-  const idx = CATEGORY_ORDER.indexOf(category);
-  return idx === -1 ? CATEGORY_ORDER.length : idx;
+// カテゴリにサブカテゴリが定義済みなら、実際に使われているかを問わずその全選択肢を表示する。
+// 未定義（従来通りの自由なタグ）のカテゴリは、実際にtipsで使われているタグからのみ表示する。
+const tagGroups: { category: string; childTags: string[] }[] = [];
+for (const category of CATEGORY_ORDER) {
+  const defined = SUBCATEGORY_ORDER[category] ?? [];
+  if (defined.length > 0) {
+    tagGroups.push({ category, childTags: defined.map((sub) => `${category}/${sub}`) });
+    continue;
+  }
+  const used = usedTagsByCategory.get(category);
+  if (!used) continue;
+  tagGroups.push({ category, childTags: used.filter((tag) => tag !== category) });
 }
 
-tagSearchGroups.innerHTML = [...tagsByCategory.entries()]
-  .sort(([a], [b]) => categoryOrderIndex(a) - categoryOrderIndex(b) || a.localeCompare(b, "ja"))
-  .map(([category, categoryTags]) => {
-    const children = categoryTags
-      .filter((tag) => tag !== category)
+tagSearchGroups.innerHTML = tagGroups
+  .map(({ category, childTags }) => {
+    const children = childTags
       .map(
         (tag) => `
           <label class="tag-checkbox tag-checkbox-child">

@@ -8,6 +8,6 @@ image: ireland-crosswalk-sign.svg
 image_credit: "Government of Ireland, public domain, via Wikimedia Commons"
 tags:
   - 横断歩道
-  - 横断歩道/黄色い外枠
+  - 横断歩道/枠線黄色
 ---
 通常の青地白三角の歩行者標識の周りに、さらに黄色い正方形の縁取りが付く。他のヨーロッパ諸国にはない特徴で一目で判別できる。

@@ -1,8 +1,28 @@
 import { load as loadYaml } from "js-yaml";
-import categoryOrder from "./data/categories.json";
+import categoriesData from "./data/categories.json";
 
-export const CATEGORY_ORDER: readonly string[] = categoryOrder;
+const CATEGORY_SUBCATEGORIES: Record<string, string[]> = categoriesData;
+export const CATEGORY_ORDER: readonly string[] = Object.keys(CATEGORY_SUBCATEGORIES);
+export const SUBCATEGORY_ORDER: Readonly<Record<string, readonly string[]>> = CATEGORY_SUBCATEGORIES;
 const CATEGORY_SET = new Set(CATEGORY_ORDER);
+
+function validateTag(file: string, category: string, tag: string) {
+  if (tag === category) return;
+  const [prefix, ...rest] = tag.split("/");
+  const subcategory = rest.join("/");
+  if (!subcategory) {
+    throw new Error(`${file}: tag "${tag}" is not in "カテゴリ/サブカテゴリ" form`);
+  }
+  if (!CATEGORY_SET.has(prefix)) {
+    throw new Error(`${file}: tag "${tag}" has an unknown category prefix`);
+  }
+  const allowed = CATEGORY_SUBCATEGORIES[prefix];
+  if (allowed.length > 0 && !allowed.includes(subcategory)) {
+    throw new Error(
+      `${file}: subcategory "${subcategory}" is not defined for category "${prefix}" in src/data/categories.json`,
+    );
+  }
+}
 
 export interface TipLocation {
   continent?: string;
@@ -53,6 +73,8 @@ function parseTip(file: string, raw: string): Tip | null {
       `${file}: category "${data.category}" is not defined in src/data/categories.json`,
     );
   }
+
+  for (const tag of data.tags ?? []) validateTag(file, data.category, tag);
 
   return {
     title: data.title,
