@@ -3,7 +3,7 @@ import { marked } from "marked";
 import "./style.css";
 import worldData from "./data/world-110m.json";
 import { CONTINENT_STYLES, continentSlug, resolveContinent } from "./continents";
-import { allTags, tipsForCountry, tipsForTag, type Tip } from "./tips";
+import { allTags, CATEGORY_ORDER, countriesForTagSelection, tipsForCountry, type Tip } from "./tips";
 import { flagUrlForCountry, tldsForCountry } from "./countryData";
 
 interface CountryFeature {
@@ -20,15 +20,17 @@ app.innerHTML = `
     <header class="page-header">
       <h1>GeoGuessr Tips</h1>
       <p class="lede">GeoGuessrで役立つTipsをまとめていく。</p>
-      <div class="tag-search">
-        <label for="tag-search-input" class="tag-search-label">タグで検索</label>
-        <div class="tag-search-row">
-          <input type="text" id="tag-search-input" class="tag-search-input" list="tag-options" placeholder="例: ナンバープレート/黄色" autocomplete="off" />
-          <datalist id="tag-options"></datalist>
-          <button type="button" id="tag-search-clear" class="tag-search-clear" hidden>✕</button>
-        </div>
-      </div>
     </header>
+    <details class="tag-search-panel" id="tag-search-panel">
+      <summary class="tag-search-summary">
+        <span>タグで検索</span>
+        <span class="tag-search-summary-count" id="tag-search-summary-count" hidden></span>
+      </summary>
+      <div class="tag-search-body">
+        <div class="tag-search-groups" id="tag-search-groups"></div>
+        <button type="button" id="tag-search-clear" class="tag-search-clear">すべてクリア</button>
+      </div>
+    </details>
     <div class="layout">
       <main>
         <div class="map-card" id="map-card">
@@ -164,8 +166,10 @@ const tipsCountryName = document.querySelector<HTMLSpanElement>("#tips-country-n
 const tipsCountryTld = document.querySelector<HTMLSpanElement>("#tips-country-tld")!;
 const tipsPlaceholder = document.querySelector<HTMLParagraphElement>("#tips-placeholder")!;
 const tipsList = document.querySelector<HTMLUListElement>("#tips-list")!;
-const tagSearchInput = document.querySelector<HTMLInputElement>("#tag-search-input")!;
+const tagSearchPanel = document.querySelector<HTMLDetailsElement>("#tag-search-panel")!;
+const tagSearchGroups = document.querySelector<HTMLDivElement>("#tag-search-groups")!;
 const tagSearchClearButton = document.querySelector<HTMLButtonElement>("#tag-search-clear")!;
+const tagSearchSummaryCount = document.querySelector<HTMLSpanElement>("#tag-search-summary-count")!;
 
 let selectedPathEl: SVGPathElement | null = null;
 let selectedCellEl: HTMLElement | null = null;
@@ -186,8 +190,47 @@ function escapeHtml(text: string): string {
     .replace(/"/g, "&quot;");
 }
 
-document.querySelector<HTMLDataListElement>("#tag-options")!.innerHTML = allTags()
-  .map((tag) => `<option value="${escapeHtml(tag)}"></option>`)
+function tagCategory(tag: string): string {
+  return tag.split("/")[0];
+}
+
+const tagsByCategory = new Map<string, string[]>();
+for (const tag of allTags()) {
+  const category = tagCategory(tag);
+  const list = tagsByCategory.get(category) ?? [];
+  list.push(tag);
+  tagsByCategory.set(category, list);
+}
+
+function categoryOrderIndex(category: string): number {
+  const idx = CATEGORY_ORDER.indexOf(category);
+  return idx === -1 ? CATEGORY_ORDER.length : idx;
+}
+
+tagSearchGroups.innerHTML = [...tagsByCategory.entries()]
+  .sort(([a], [b]) => categoryOrderIndex(a) - categoryOrderIndex(b) || a.localeCompare(b, "ja"))
+  .map(([category, categoryTags]) => {
+    const children = categoryTags
+      .filter((tag) => tag !== category)
+      .map(
+        (tag) => `
+          <label class="tag-checkbox tag-checkbox-child">
+            <input type="checkbox" value="${escapeHtml(tag)}" />
+            ${escapeHtml(tag.slice(category.length + 1))}
+          </label>
+        `,
+      )
+      .join("");
+    return `
+      <div class="tag-search-group">
+        <label class="tag-checkbox tag-checkbox-category">
+          <input type="checkbox" value="${escapeHtml(category)}" />
+          ${escapeHtml(category)}
+        </label>
+        <div class="tag-search-children">${children}</div>
+      </div>
+    `;
+  })
   .join("");
 
 function renderTipCard(tip: Tip, options?: { showLocation?: boolean }): string {
@@ -327,35 +370,44 @@ function showCountryGrid(continent: string) {
   clearCountrySelection();
 }
 
-function runTagSearch(tag: string) {
-  const matched = tipsForTag(tag);
-  if (matched.length === 0) return;
+function showAllCountriesGrid() {
+  const entries = features
+    .map((feature, idx) => ({ feature, idx, name: feature.properties.name_ja || feature.properties.name }))
+    .sort((a, b) => a.name.localeCompare(b.name, "ja"));
+
+  countryPanelTitle.textContent = `すべての国（${entries.length}）`;
+  countryGrid.innerHTML = entries
+    .map(({ idx, name }) => {
+      const flagUrl = flagUrlForCountry(name);
+      const flagImg = flagUrl ? `<img class="country-flag" src="${flagUrl}" alt="" />` : "";
+      return `<li><button type="button" class="country-cell" data-idx="${idx}">${flagImg}<span class="country-name">${escapeHtml(name)}</span></button></li>`;
+    })
+    .join("");
+  countryPanel.hidden = false;
+  clearCountrySelection();
+}
+
+function runTagSearch(selectedTags: string[]) {
+  const countryMatches = countriesForTagSelection(selectedTags);
 
   clearCountrySelection();
   clearTagHighlights();
   resetMapView();
 
-  const countryNames = new Set<string>();
-  for (const tip of matched) {
-    for (const loc of tip.locations) {
-      if (loc.country) countryNames.add(loc.country);
-    }
-  }
-
-  const entries: { feature: CountryFeature; idx: number; name: string }[] = [];
-  for (const name of countryNames) {
-    const found = featureByCountryName.get(name);
+  const entries: { feature: CountryFeature; idx: number; name: string; tips: Tip[] }[] = [];
+  for (const { country, tips: countryTips } of countryMatches) {
+    const found = featureByCountryName.get(country);
     if (!found) continue;
     const pathEl = svg.querySelector<SVGPathElement>(`path.continent-path[data-idx="${found.idx}"]`);
     if (pathEl) {
       pathEl.style.fill = HIGHLIGHT_FILL;
       tagHighlightedPathEls.push(pathEl);
     }
-    entries.push({ feature: found.feature, idx: found.idx, name });
+    entries.push({ feature: found.feature, idx: found.idx, name: country, tips: countryTips });
   }
   entries.sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
-  countryPanelTitle.textContent = `「${tag}」に一致する国（${entries.length}）`;
+  countryPanelTitle.textContent = `選択したタグに一致する国（${entries.length}）`;
   countryGrid.innerHTML = entries
     .map(({ idx, name }) => {
       const flagUrl = flagUrlForCountry(name);
@@ -366,11 +418,44 @@ function runTagSearch(tag: string) {
   countryPanel.hidden = false;
 
   tipsCountryHeader.hidden = true;
-  tipsPlaceholder.hidden = true;
-  tipsList.hidden = false;
-  tipsList.innerHTML = matched.map((tip) => renderTipCard(tip, { showLocation: true })).join("");
+  const matchedTips = entries.flatMap((entry) => entry.tips);
+  if (matchedTips.length === 0) {
+    tipsPlaceholder.hidden = false;
+    tipsPlaceholder.textContent = "一致するTipsはない。";
+    tipsList.hidden = true;
+    tipsList.innerHTML = "";
+  } else {
+    tipsPlaceholder.hidden = true;
+    tipsList.hidden = false;
+    tipsList.innerHTML = matchedTips.map((tip) => renderTipCard(tip, { showLocation: true })).join("");
+  }
+}
 
-  tagSearchClearButton.hidden = false;
+function selectedTagCheckboxes(): HTMLInputElement[] {
+  return [...tagSearchGroups.querySelectorAll<HTMLInputElement>('input[type="checkbox"]')];
+}
+
+function updateTagSearch() {
+  const selected = selectedTagCheckboxes()
+    .filter((el) => el.checked)
+    .map((el) => el.value);
+
+  tagSearchSummaryCount.hidden = selected.length === 0;
+  tagSearchSummaryCount.textContent = selected.length > 0 ? `(${selected.length})` : "";
+
+  if (selected.length === 0) {
+    clearTagHighlights();
+    resetMapView();
+    showAllCountriesGrid();
+    return;
+  }
+  runTagSearch(selected);
+}
+
+function selectOnlyTag(tag: string) {
+  for (const checkbox of selectedTagCheckboxes()) checkbox.checked = checkbox.value === tag;
+  tagSearchPanel.open = true;
+  updateTagSearch();
 }
 
 svg.addEventListener("click", (event) => {
@@ -403,36 +488,21 @@ tipsList.addEventListener("click", (event) => {
   if (!target) return;
   const tag = target.dataset.tag;
   if (!tag) return;
-  tagSearchInput.value = tag;
-  runTagSearch(tag);
+  selectOnlyTag(tag);
 });
 
 backButton.addEventListener("click", () => {
   resetMapView();
-  countryPanel.hidden = true;
-  clearCountrySelection();
+  showAllCountriesGrid();
 });
 
-const tagSet = new Set(allTags());
-
-tagSearchInput.addEventListener("input", () => {
-  const value = tagSearchInput.value.trim();
-  if (value === "") {
-    tagSearchClearButton.hidden = true;
-    clearTagHighlights();
-    countryPanel.hidden = true;
-    clearCountrySelection();
-    resetMapView();
-    return;
-  }
-  if (tagSet.has(value)) runTagSearch(value);
+tagSearchGroups.addEventListener("change", () => {
+  updateTagSearch();
 });
 
 tagSearchClearButton.addEventListener("click", () => {
-  tagSearchInput.value = "";
-  tagSearchClearButton.hidden = true;
-  clearTagHighlights();
-  countryPanel.hidden = true;
-  clearCountrySelection();
-  resetMapView();
+  for (const checkbox of selectedTagCheckboxes()) checkbox.checked = false;
+  updateTagSearch();
 });
+
+showAllCountriesGrid();

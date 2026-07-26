@@ -1,4 +1,8 @@
 import { load as loadYaml } from "js-yaml";
+import categoryOrder from "./data/categories.json";
+
+export const CATEGORY_ORDER: readonly string[] = categoryOrder;
+const CATEGORY_SET = new Set(CATEGORY_ORDER);
 
 export interface TipLocation {
   continent?: string;
@@ -44,6 +48,12 @@ function parseTip(file: string, raw: string): Tip | null {
   const data = loadYaml(frontmatterYaml) as TipFrontmatter | undefined;
   if (!data?.title || !data.category || !Array.isArray(data.locations)) return null;
 
+  if (!CATEGORY_SET.has(data.category)) {
+    throw new Error(
+      `${file}: category "${data.category}" is not defined in src/data/categories.json`,
+    );
+  }
+
   return {
     title: data.title,
     category: data.category,
@@ -77,6 +87,40 @@ export function allTags(): string[] {
   return [...unique].sort((a, b) => a.localeCompare(b, "ja"));
 }
 
-export function tipsForTag(tag: string): Tip[] {
-  return tips.filter((tip) => tip.tags?.includes(tag));
+export interface CountryTagMatch {
+  country: string;
+  tips: Tip[];
+}
+
+export function countriesForTagSelection(selectedTags: string[]): CountryTagMatch[] {
+  if (selectedTags.length === 0) return [];
+
+  const tagsByCategory = new Map<string, string[]>();
+  for (const tag of selectedTags) {
+    const category = tag.split("/")[0];
+    const list = tagsByCategory.get(category) ?? [];
+    list.push(tag);
+    tagsByCategory.set(category, list);
+  }
+
+  const tipsByCountry = new Map<string, Tip[]>();
+  for (const tip of tips) {
+    for (const loc of tip.locations) {
+      if (!loc.country) continue;
+      const list = tipsByCountry.get(loc.country) ?? [];
+      list.push(tip);
+      tipsByCountry.set(loc.country, list);
+    }
+  }
+
+  const results: CountryTagMatch[] = [];
+  for (const [country, countryTips] of tipsByCountry) {
+    const matchesAllCategories = [...tagsByCategory.values()].every((categoryTags) =>
+      countryTips.some((tip) => categoryTags.some((tag) => tip.tags?.includes(tag))),
+    );
+    if (!matchesAllCategories) continue;
+    const matchingTips = countryTips.filter((tip) => selectedTags.some((tag) => tip.tags?.includes(tag)));
+    results.push({ country, tips: matchingTips });
+  }
+  return results;
 }
