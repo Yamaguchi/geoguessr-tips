@@ -4,6 +4,7 @@ category: ボラード
 locations:
   - continent: アジア
     country: モンゴル国
+street_view: "https://www.google.com/maps/embed?pb=!4v1785079997842!6m8!1m7!1s9D-OzXvVu7gSyaqBVQMmKg!2m2!1d47.92811390416013!2d107.1452107597561!3f101.5231318097724!4f-6.928983798653363!5f1.5158672326783353"
 tags:
   - ボラード
   - ボラード/白地
