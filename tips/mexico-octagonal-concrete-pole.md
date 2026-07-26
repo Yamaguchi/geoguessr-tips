@@ -4,6 +4,7 @@ category: 電柱
 locations:
   - continent: 北アメリカ
     country: メキシコ
+street_view: "https://www.google.com/maps/embed?pb=!4v1785082111729!6m8!1m7!1s5WRdqpTr_CzLgitJ-o1gRw!2m2!1d19.35940158547016!2d-98.97516756797481!3f29.062982113704415!4f1.7229699929650337!5f0.7820865974627469"
 tags:
   - 電柱
   - 電柱/八角形
