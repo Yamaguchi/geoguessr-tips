@@ -4,6 +4,7 @@ category: シェブロン
 locations:
   - continent: 南アメリカ
     country: アルゼンチン
+street_view: "https://www.google.com/maps/embed?pb=!4v1785086380240!6m8!1m7!1skmteRR03W9zpJ9ZrBOfrbA!2m2!1d-36.08553120055171!2d-63.57071759411114!3f162.00878754618014!4f-4.231079929219746!5f1.81409474254068"
 tags:
   - シェブロン
   - シェブロン/その他
