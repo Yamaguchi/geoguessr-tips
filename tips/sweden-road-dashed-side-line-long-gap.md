@@ -4,6 +4,7 @@ category: 道路
 locations:
   - continent: ヨーロッパ
     country: スウェーデン
+street_view: "https://www.google.com/maps/embed?pb=!4v1785253497159!6m8!1m7!1sxIXfEf4gx3Q_lZzzuTYeZA!2m2!1d65.4017780068551!2d16.37016898934901!3f304.1498530801946!4f-9.31968926759238!5f1.6784870274408683"
 tags:
   - 道路
   - 道路/区画線白
