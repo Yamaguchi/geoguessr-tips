@@ -6,6 +6,7 @@ locations:
     country: エストニア
   - continent: ヨーロッパ
     country: フィンランド
+street_view: "https://www.google.com/maps/embed?pb=!4v1785255222655!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzZwcnljSnc.!2m2!1d62.55362286276763!2d29.13828359463619!3f215.90470723251042!4f-1.9335968031166288!5f0.9064334270893728"
 tags:
   - ボラード
   - ボラード/白地
