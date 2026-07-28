@@ -4,6 +4,7 @@ category: ボラード
 locations:
   - continent: ヨーロッパ
     country: スウェーデン
+street_view: "https://www.google.com/maps/embed?pb=!4v1785254869086!6m8!1m7!1sEgVVbrGvLsGg33p_vfwVDA!2m2!1d59.82432283510661!2d17.74635285625605!3f4.538963727467602!4f-10.941369270418917!5f1.3258912664924547"
 tags:
   - ボラード
   - ボラード/白地
