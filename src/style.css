@@ -325,6 +325,12 @@ h1 {
   margin: 0 0 12px;
 }
 
+.tips-count {
+  margin-left: 6px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
 .tips-country-header {
   display: flex;
   align-items: center;

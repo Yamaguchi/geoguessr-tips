@@ -43,7 +43,7 @@ app.innerHTML = `
         <ul class="country-list" id="country-grid"></ul>
       </section>
       <aside class="tips-panel" id="tips-panel">
-        <h2>Tips</h2>
+        <h2>Tips<span class="tips-count" id="tips-count" hidden></span></h2>
         <div class="tips-country-header" id="tips-country-header" hidden>
           <img class="tips-country-flag" id="tips-country-flag" alt="" />
           <div class="tips-country-meta">
@@ -166,6 +166,7 @@ const tipsCountryName = document.querySelector<HTMLSpanElement>("#tips-country-n
 const tipsCountryTld = document.querySelector<HTMLSpanElement>("#tips-country-tld")!;
 const tipsPlaceholder = document.querySelector<HTMLParagraphElement>("#tips-placeholder")!;
 const tipsList = document.querySelector<HTMLUListElement>("#tips-list")!;
+const tipsCount = document.querySelector<HTMLSpanElement>("#tips-count")!;
 const tagSearchPanel = document.querySelector<HTMLDetailsElement>("#tag-search-panel")!;
 const tagSearchGroups = document.querySelector<HTMLDivElement>("#tag-search-groups")!;
 const tagSearchClearButton = document.querySelector<HTMLButtonElement>("#tag-search-clear")!;
@@ -282,6 +283,11 @@ function renderTipCard(tip: Tip, options?: { showLocation?: boolean }): string {
   `;
 }
 
+function setTipsCount(count: number) {
+  tipsCount.hidden = count === 0;
+  tipsCount.textContent = count > 0 ? `(${count})` : "";
+}
+
 function selectCountry(feature: CountryFeature, pathEl: SVGPathElement | null, cellEl: HTMLElement | null) {
   clearTagHighlights();
   if (selectedPathEl) selectedPathEl.style.fill = selectedPathEl.dataset.baseFill ?? selectedPathEl.style.fill;
@@ -310,6 +316,7 @@ function selectCountry(feature: CountryFeature, pathEl: SVGPathElement | null, c
   tipsCountryTld.hidden = tlds.length === 0;
 
   tipsPlaceholder.hidden = true;
+  setTipsCount(matched.length);
   if (matched.length === 0) {
     tipsPlaceholder.hidden = false;
     tipsPlaceholder.textContent = "この国のTipsはまだない。";
@@ -331,6 +338,7 @@ function clearCountrySelection() {
   tipsPlaceholder.textContent = "国名一覧から国を選択するとTipsを表示する。";
   tipsList.hidden = true;
   tipsList.innerHTML = "";
+  setTipsCount(0);
 }
 
 function zoomToContinent(continent: string) {
@@ -426,6 +434,7 @@ function runTagSearch(selectedTags: string[]) {
 
   tipsCountryHeader.hidden = true;
   const matchedTips = entries.flatMap((entry) => entry.tips);
+  setTipsCount(matchedTips.length);
   if (matchedTips.length === 0) {
     tipsPlaceholder.hidden = false;
     tipsPlaceholder.textContent = "一致するTipsはない。";
