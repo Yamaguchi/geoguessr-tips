@@ -6,6 +6,7 @@ locations:
     country: スロベニア
 image: slovenia-crosswalk-sign.svg
 image_credit: "Government of Slovenia, public domain, via Wikimedia Commons"
+street_view: "https://www.google.com/maps/embed?pb=!4v1785321901996!6m8!1m7!1sIdCLpe79EHAcmxzr55Y2ng!2m2!1d46.04800931642723!2d14.5014132450726!3f46.88194430959381!4f5.7864483033713725!5f3.325193203789971"
 tags:
   - 横断歩道
   - 横断歩道/枠線白
