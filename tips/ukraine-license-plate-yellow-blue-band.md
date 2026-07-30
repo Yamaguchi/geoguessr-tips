@@ -4,6 +4,7 @@ category: ナンバープレート
 locations:
   - continent: ヨーロッパ
     country: ウクライナ
+street_view: "https://www.google.com/maps/embed?pb=!4v1785376429096!6m8!1m7!1somDvlfDmUgj6OXRA3N4T6w!2m2!1d50.46343622059624!2d30.51630388436553!3f354.2031214495929!4f-24.850565035583372!5f3.1643155630388686"
 tags:
   - ナンバープレート
   - ナンバープレート/白
