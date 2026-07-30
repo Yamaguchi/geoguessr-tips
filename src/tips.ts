@@ -55,6 +55,12 @@ interface TipFrontmatter {
 }
 
 export const MAX_STARS = 3;
+/** starsを書かないTipは中間の2として扱う。 */
+export const DEFAULT_STARS = 2;
+
+export function starsOf(tip: Tip): number {
+  return tip.stars ?? DEFAULT_STARS;
+}
 
 function parseStars(file: string, stars: unknown): number | undefined {
   if (stars === undefined || stars === null) return undefined;
@@ -107,7 +113,7 @@ export const tips: Tip[] = Object.entries(rawTipFiles)
   .filter((tip): tip is Tip => tip !== null);
 
 export function sortByStars(list: Tip[]): Tip[] {
-  return [...list].sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
+  return [...list].sort((a, b) => starsOf(b) - starsOf(a));
 }
 
 export function tipsForCountry(continent: string, country: string): Tip[] {

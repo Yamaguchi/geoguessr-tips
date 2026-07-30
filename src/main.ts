@@ -3,7 +3,7 @@ import { marked } from "marked";
 import "./style.css";
 import worldData from "./data/world-110m.json";
 import { CONTINENT_STYLES, continentSlug, resolveContinent } from "./continents";
-import { allTags, CATEGORY_ORDER, MAX_STARS, SUBCATEGORY_ORDER, countriesForTagSelection, sortByStars, tipsForCountry, type Tip } from "./tips";
+import { allTags, CATEGORY_ORDER, MAX_STARS, SUBCATEGORY_ORDER, countriesForTagSelection, sortByStars, starsOf, tipsForCountry, type Tip } from "./tips";
 import { flagUrlForCountry, tldsForCountry } from "./countryData";
 
 interface CountryFeature {
@@ -270,9 +270,8 @@ function renderTipCard(tip: Tip, options?: { showLocation?: boolean }): string {
       </div>
     `
     : "";
-  const stars = tip.stars
-    ? `<span class="tip-stars">${"★".repeat(tip.stars)}${"☆".repeat(MAX_STARS - tip.stars)}</span>`
-    : "";
+  const starCount = starsOf(tip);
+  const stars = `<span class="tip-stars">${"★".repeat(starCount)}${"☆".repeat(MAX_STARS - starCount)}</span>`;
   return `
     <li class="tip-card">
       ${stars}
