@@ -40,6 +40,7 @@ export interface Tip {
   image?: string;
   imageCredit?: string;
   streetView?: string;
+  stars?: number;
 }
 
 interface TipFrontmatter {
@@ -50,6 +51,17 @@ interface TipFrontmatter {
   image?: string;
   image_credit?: string;
   street_view?: string;
+  stars?: number;
+}
+
+export const MAX_STARS = 3;
+
+function parseStars(file: string, stars: unknown): number | undefined {
+  if (stars === undefined || stars === null) return undefined;
+  if (!Number.isInteger(stars) || (stars as number) < 1 || (stars as number) > MAX_STARS) {
+    throw new Error(`${file}: stars must be an integer between 1 and ${MAX_STARS}`);
+  }
+  return stars as number;
 }
 
 const FRONTMATTER_RE = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
@@ -86,6 +98,7 @@ function parseTip(file: string, raw: string): Tip | null {
     image: data.image,
     imageCredit: data.image_credit,
     streetView: data.street_view,
+    stars: parseStars(file, data.stars),
   };
 }
 
@@ -93,10 +106,16 @@ export const tips: Tip[] = Object.entries(rawTipFiles)
   .map(([file, raw]) => parseTip(file, raw))
   .filter((tip): tip is Tip => tip !== null);
 
+export function sortByStars(list: Tip[]): Tip[] {
+  return [...list].sort((a, b) => (b.stars ?? 0) - (a.stars ?? 0));
+}
+
 export function tipsForCountry(continent: string, country: string): Tip[] {
-  return tips.filter((tip) =>
-    tip.locations.some(
-      (loc) => loc.country === country || (!loc.country && loc.continent === continent),
+  return sortByStars(
+    tips.filter((tip) =>
+      tip.locations.some(
+        (loc) => loc.country === country || (!loc.country && loc.continent === continent),
+      ),
     ),
   );
 }
@@ -142,7 +161,7 @@ export function countriesForTagSelection(selectedTags: string[]): CountryTagMatc
     );
     if (!matchesAllCategories) continue;
     const matchingTips = countryTips.filter((tip) => selectedTags.some((tag) => tip.tags?.includes(tag)));
-    results.push({ country, tips: matchingTips });
+    results.push({ country, tips: sortByStars(matchingTips) });
   }
   return results;
 }

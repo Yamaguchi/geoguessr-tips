@@ -3,7 +3,7 @@ import { marked } from "marked";
 import "./style.css";
 import worldData from "./data/world-110m.json";
 import { CONTINENT_STYLES, continentSlug, resolveContinent } from "./continents";
-import { allTags, CATEGORY_ORDER, SUBCATEGORY_ORDER, countriesForTagSelection, tipsForCountry, type Tip } from "./tips";
+import { allTags, CATEGORY_ORDER, MAX_STARS, SUBCATEGORY_ORDER, countriesForTagSelection, sortByStars, tipsForCountry, type Tip } from "./tips";
 import { flagUrlForCountry, tldsForCountry } from "./countryData";
 
 interface CountryFeature {
@@ -270,8 +270,12 @@ function renderTipCard(tip: Tip, options?: { showLocation?: boolean }): string {
       </div>
     `
     : "";
+  const stars = tip.stars
+    ? `<span class="tip-stars">${"★".repeat(tip.stars)}${"☆".repeat(MAX_STARS - tip.stars)}</span>`
+    : "";
   return `
     <li class="tip-card">
+      ${stars}
       <span class="tip-category">${escapeHtml(tip.category)}</span>
       <h3>${escapeHtml(tip.title)}</h3>
       ${location}
@@ -433,7 +437,7 @@ function runTagSearch(selectedTags: string[]) {
   countryPanel.hidden = false;
 
   tipsCountryHeader.hidden = true;
-  const matchedTips = entries.flatMap((entry) => entry.tips);
+  const matchedTips = sortByStars(entries.flatMap((entry) => entry.tips));
   setTipsCount(matchedTips.length);
   if (matchedTips.length === 0) {
     tipsPlaceholder.hidden = false;
