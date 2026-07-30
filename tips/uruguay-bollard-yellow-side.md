@@ -4,6 +4,7 @@ category: ボラード
 locations:
   - continent: 南アメリカ
     country: ウルグアイ
+street_view: "https://www.google.com/maps/embed?pb=!4v1785327896604!6m8!1m7!1slpl9HxZv985ynT_akjFbkQ!2m2!1d-32.34218557302683!2d-56.25266605272349!3f192.0891688828578!4f-5.588506330094063!5f1.4512394473832533"
 tags:
   - ボラード
   - ボラード/白地
