@@ -4,6 +4,7 @@ category: ボラード
 locations:
   - continent: ヨーロッパ
     country: キプロス
+street_view: "https://www.google.com/maps/embed?pb=!4v1785327653628!6m8!1m7!1s8UyIBNVRSz2WA4aC7y2k6w!2m2!1d34.86826640292299!2d33.49098993836871!3f175.91461222630593!4f-0.6396180650061183!5f1.3591746264791924"
 tags:
   - ボラード
   - ボラード/白地
