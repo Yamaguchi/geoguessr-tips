@@ -4,6 +4,7 @@ category: 横断歩道
 locations:
   - continent: ヨーロッパ
     country: スペイン
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1784995360287!6m8!1m7!1sIGtoPWs3zQppukDItBYSVw!2m2!1d41.40994887962142!2d2.019163252916337!3f225.86351250707403!4f3.6336244981084747!5f1.7485391806016333"
 tags:
   - 横断歩道

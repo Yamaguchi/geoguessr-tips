@@ -4,6 +4,7 @@ category: ナンバープレート
 locations:
   - continent: アフリカ
     country: ケニア
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1785045364976!6m8!1m7!1sC-tP1UmdsDLrtBIAU3bxeQ!2m2!1d-1.267040979704334!2d36.84497457261545!3f247.5344529118915!4f-3.6166625867528097!5f2.6288363485719524"
 tags:
   - ナンバープレート
