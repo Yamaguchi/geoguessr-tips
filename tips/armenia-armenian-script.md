@@ -4,6 +4,7 @@ category: 言語
 locations:
   - continent: アジア
     country: アルメニア
+stars: 3
 tags:
   - 言語
   - 言語/固有文字

@@ -4,6 +4,7 @@ category: ナンバープレート
 locations:
   - continent: ヨーロッパ
     country: ノルウェー
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1785321547049!6m8!1m7!1sD2KThwhsz33cjzCIAMEgPQ!2m2!1d59.90870698833809!2d10.74586638554377!3f125.87810327534761!4f1.003437409494623!5f1.041135809013074"
 tags:
   - ナンバープレート

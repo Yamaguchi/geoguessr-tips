@@ -4,6 +4,7 @@ category: 言語
 locations:
   - continent: アジア
     country: ラオス
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1784980291613!6m8!1m7!1sOrIhxFC7Q9Y3lQRaaFLqNA!2m2!1d17.97054869658239!2d102.6185551656414!3f311.1150093213143!4f13.819489349833006!5f3.325193203789971"
 tags:
   - 言語

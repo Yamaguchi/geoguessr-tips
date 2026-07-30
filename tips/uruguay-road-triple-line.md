@@ -4,6 +4,7 @@ category: 道路
 locations:
   - continent: 南アメリカ
     country: ウルグアイ
+stars: 3
 tags:
   - 道路
   - 道路/中央線黄色

@@ -4,6 +4,7 @@ category: 言語
 locations:
   - continent: アジア
     country: カンボジア
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1784979767014!6m8!1m7!1sdOrZSgFroE2CdzY4TYH9Lw!2m2!1d11.58635433643176!2d104.9002367427042!3f74.41644867921056!4f12.563317405874102!5f0.4000000000000002"
 tags:
   - 言語

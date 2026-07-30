@@ -4,6 +4,7 @@ category: ナンバープレート
 locations:
   - continent: ヨーロッパ
     country: ボスニア・ヘルツェゴビナ
+stars: 3
 tags:
   - ナンバープレート
   - ナンバープレート/白

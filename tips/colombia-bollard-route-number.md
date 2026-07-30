@@ -4,6 +4,7 @@ category: ボラード
 locations:
   - continent: 南アメリカ
     country: コロンビア
+stars: 3
 tags:
   - ボラード
   - ボラード/その他

@@ -4,6 +4,7 @@ category: 道路標識
 locations:
   - continent: ヨーロッパ
     country: フランス
+stars: 3
 tags:
   - 道路標識
   - 道路標識/路線番号

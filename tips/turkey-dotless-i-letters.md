@@ -4,6 +4,7 @@ category: 言語
 locations:
   - continent: アジア
     country: トルコ
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1784980500301!6m8!1m7!1sKb1XnK-HuOoAAAQrXhGa9g!2m2!1d41.02560912573255!2d28.97410628186!3f65.21135998353121!4f-15.829560616458124!5f2.8581316386188105"
 tags:
   - 言語

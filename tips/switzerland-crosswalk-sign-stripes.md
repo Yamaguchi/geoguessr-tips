@@ -4,6 +4,7 @@ category: 横断歩道
 locations:
   - continent: ヨーロッパ
     country: スイス
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1785057854003!6m8!1m7!1sOc_BU_N3jaopdIs0d6YtFg!2m2!1d47.37542000541031!2d8.517989438204367!3f326.7003088733448!4f4.567225298876764!5f0.771349094567642"
 tags:
   - 横断歩道

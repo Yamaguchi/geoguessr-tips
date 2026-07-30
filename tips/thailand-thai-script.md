@@ -4,6 +4,7 @@ category: 言語
 locations:
   - continent: アジア
     country: タイ王国
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1784979362245!6m8!1m7!1s_pcsBqsgu5aJT7aEni46-g!2m2!1d13.75044126496484!2d100.48956855414!3f233.67974829610242!4f-0.606706139343018!5f3.3032689441477583"
 tags:
   - 言語

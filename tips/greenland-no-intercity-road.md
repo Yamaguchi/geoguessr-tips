@@ -4,6 +4,7 @@ category: 道路
 locations:
   - continent: 北アメリカ
     country: グリーンランド
+stars: 3
 tags:
   - 道路
   - 道路/その他

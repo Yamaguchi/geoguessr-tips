@@ -4,6 +4,7 @@ category: ボラード
 locations:
   - continent: ヨーロッパ
     country: アイスランド
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1785301137587!6m8!1m7!1sLWm1YVSo3Fd5udfr6Bac0w!2m2!1d63.89640205358005!2d-20.57059426662196!3f276.172331070121!4f-16.126541901376328!5f0.7820865974627469"
 tags:
   - ボラード

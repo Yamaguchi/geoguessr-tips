@@ -4,6 +4,7 @@ category: 乗り物
 locations:
   - continent: ヨーロッパ
     country: モナコ
+stars: 3
 tags:
   - 乗り物
   - 乗り物/MonaBike

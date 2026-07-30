@@ -4,6 +4,7 @@ category: 道路
 locations:
   - continent: ヨーロッパ
     country: フランス
+stars: 3
 tags:
   - 道路
   - 道路/区画線白

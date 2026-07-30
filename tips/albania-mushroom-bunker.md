@@ -4,6 +4,7 @@ category: 建築
 locations:
   - continent: ヨーロッパ
     country: アルバニア
+stars: 3
 tags:
   - 建築
   - 建築/トーチカ

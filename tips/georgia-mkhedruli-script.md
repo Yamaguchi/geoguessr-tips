@@ -4,6 +4,7 @@ category: 言語
 locations:
   - continent: アジア
     country: ジョージア
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1784969281194!6m8!1m7!1sCAoSHENJQUJJaER5ekwzejd6eTJqQzJZdE0wZy1HaVY.!2m2!1d42.2715708077672!2d42.66682541783079!3f124.11781990453503!4f0.7830839937801954!5f3.00605266243354"
 tags:
   - 言語

@@ -4,6 +4,7 @@ category: 言語
 locations:
   - continent: ヨーロッパ
     country: ポーランド
+stars: 3
 tags:
   - 言語
   - 言語/特殊文字

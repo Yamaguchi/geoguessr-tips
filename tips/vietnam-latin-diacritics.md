@@ -4,6 +4,7 @@ category: 言語
 locations:
   - continent: アジア
     country: ベトナム
+stars: 3
 street_view: "https://www.google.com/maps/embed?pb=!4v1784979526005!6m8!1m7!1sF4saTCC3O7rzY0SMFT46RA!2m2!1d21.02446770571326!2d105.8569951512351!3f128.63254557316137!4f-0.22794229532374288!5f3.325193203789971"
 tags:
   - 言語

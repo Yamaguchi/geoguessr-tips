@@ -4,6 +4,7 @@ category: ナンバープレート
 locations:
   - continent: ヨーロッパ
     country: ポルトガル
+stars: 3
 tags:
   - ナンバープレート
   - ナンバープレート/白

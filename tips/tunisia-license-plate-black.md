@@ -4,6 +4,7 @@ category: ナンバープレート
 locations:
   - continent: アフリカ
     country: チュニジア
+stars: 3
 tags:
   - ナンバープレート
   - ナンバープレート/黒

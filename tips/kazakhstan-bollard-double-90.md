@@ -4,6 +4,7 @@ category: ボラード
 locations:
   - continent: アジア
     country: カザフスタン
+stars: 3
 tags:
   - ボラード
   - ボラード/その他

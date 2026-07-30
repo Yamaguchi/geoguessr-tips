@@ -4,6 +4,7 @@ category: 電柱
 locations:
   - continent: 南アメリカ
     country: ウルグアイ
+stars: 3
 tags:
   - 電柱
   - 電柱/三又形
