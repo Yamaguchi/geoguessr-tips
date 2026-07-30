@@ -16,6 +16,7 @@ locations:
     country: タンザニア
   - continent: アフリカ
     country: ジンバブエ
+stars: 1
 image: sadc-crosswalk-sign.svg
 image_credit: "SADC-RTSM, public domain, via Wikimedia Commons"
 tags:

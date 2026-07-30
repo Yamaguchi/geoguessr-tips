@@ -10,6 +10,7 @@ locations:
     country: レソト
   - continent: アフリカ
     country: エスワティニ
+stars: 1
 tags:
   - ボラード
   - ボラード/白地

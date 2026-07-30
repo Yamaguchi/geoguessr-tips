@@ -4,6 +4,7 @@ category: 横断歩道
 locations:
   - continent: ヨーロッパ
     country: ルクセンブルク
+stars: 1
 image: luxembourg-crosswalk-sign.svg
 image_credit: "Government of Luxembourg, public domain, via Wikimedia Commons"
 tags:

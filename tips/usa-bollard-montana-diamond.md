@@ -8,6 +8,7 @@ locations:
   - continent: 北アメリカ
     country: アメリカ合衆国
     area: ネブラスカ州
+stars: 1
 tags:
   - ボラード
   - ボラード/その他

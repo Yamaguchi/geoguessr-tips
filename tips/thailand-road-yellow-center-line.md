@@ -4,6 +4,7 @@ category: 道路
 locations:
   - continent: アジア
     country: タイ王国
+stars: 1
 tags:
   - 道路
   - 道路/中央線黄色

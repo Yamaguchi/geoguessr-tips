@@ -4,6 +4,7 @@ category: 道路
 locations:
   - continent: アジア
     country: インドネシア
+stars: 1
 tags:
   - 道路
   - 道路/区画線白

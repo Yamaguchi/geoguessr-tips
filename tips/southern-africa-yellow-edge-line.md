@@ -10,6 +10,7 @@ locations:
     country: エスワティニ
   - continent: アフリカ
     country: レソト
+stars: 1
 tags:
   - 道路
   - 道路/区画線黄色

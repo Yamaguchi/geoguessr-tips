@@ -4,6 +4,7 @@ category: 横断歩道
 locations:
   - continent: ヨーロッパ
     country: クロアチア
+stars: 1
 image: croatia-crosswalk-sign.svg
 image_credit: "Government of Croatia, public domain, via Wikimedia Commons"
 tags:

@@ -4,6 +4,7 @@ category: 道路
 locations:
   - continent: アフリカ
     country: ウガンダ
+stars: 1
 street_view: "https://www.google.com/maps/embed?pb=!4v1785045141973!6m8!1m7!1sztW9BuW5Dh1RNLj9J6zy4w!2m2!1d2.459333948874985!2d31.80746001618881!3f59.753126757597535!4f-18.24432294167812!5f0.7820865974627469"
 tags:
   - 道路

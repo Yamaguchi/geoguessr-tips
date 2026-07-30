@@ -12,6 +12,7 @@ locations:
     country: ブルガリア
   - continent: ヨーロッパ
     country: セルビア
+stars: 1
 tags:
   - 言語
   - 言語/キリル文字
