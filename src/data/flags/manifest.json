@@ -12,6 +12,12 @@
     "flag": "ie.svg"
   },
   {
+    "name_ja": "アシュモア・カルティエ諸島",
+    "name": "Ashmore and Cartier Is.",
+    "iso_a2": "AU",
+    "flag": "au.svg"
+  },
+  {
     "name_ja": "アゼルバイジャン",
     "name": "Azerbaijan",
     "iso_a2": "AZ",
@@ -28,6 +34,18 @@
     "name": "United States of America",
     "iso_a2": "US",
     "flag": "us.svg"
+  },
+  {
+    "name_ja": "アメリカ領ヴァージン諸島",
+    "name": "U.S. Virgin Is.",
+    "iso_a2": "VI",
+    "flag": "vi.svg"
+  },
+  {
+    "name_ja": "アメリカ領サモア",
+    "name": "American Samoa",
+    "iso_a2": "AS",
+    "flag": "as.svg"
   },
   {
     "name_ja": "アラブ首長国連邦",
@@ -48,6 +66,12 @@
     "flag": "ar.svg"
   },
   {
+    "name_ja": "アルバ",
+    "name": "Aruba",
+    "iso_a2": "AW",
+    "flag": "aw.svg"
+  },
+  {
     "name_ja": "アルバニア",
     "name": "Albania",
     "iso_a2": "AL",
@@ -60,10 +84,28 @@
     "flag": "am.svg"
   },
   {
+    "name_ja": "アンギラ",
+    "name": "Anguilla",
+    "iso_a2": "AI",
+    "flag": "ai.svg"
+  },
+  {
     "name_ja": "アンゴラ",
     "name": "Angola",
     "iso_a2": "AO",
     "flag": "ao.svg"
+  },
+  {
+    "name_ja": "アンティグア・バーブーダ",
+    "name": "Antigua and Barb.",
+    "iso_a2": "AG",
+    "flag": "ag.svg"
+  },
+  {
+    "name_ja": "アンドラ",
+    "name": "Andorra",
+    "iso_a2": "AD",
+    "flag": "ad.svg"
   },
   {
     "name_ja": "イエメン",
@@ -76,6 +118,18 @@
     "name": "United Kingdom",
     "iso_a2": "GB",
     "flag": "gb.svg"
+  },
+  {
+    "name_ja": "イギリス領インド洋地域",
+    "name": "Br. Indian Ocean Ter.",
+    "iso_a2": "IO",
+    "flag": "io.svg"
+  },
+  {
+    "name_ja": "イギリス領ヴァージン諸島",
+    "name": "British Virgin Is.",
+    "iso_a2": "VG",
+    "flag": "vg.svg"
   },
   {
     "name_ja": "イスラエル",
@@ -112,6 +166,12 @@
     "name": "Indonesia",
     "iso_a2": "ID",
     "flag": "id.svg"
+  },
+  {
+    "name_ja": "ウォリス・フツナ",
+    "name": "Wallis and Futuna Is.",
+    "iso_a2": "WF",
+    "flag": "wf.svg"
   },
   {
     "name_ja": "ウガンダ",
@@ -186,10 +246,22 @@
     "flag": "au.svg"
   },
   {
+    "name_ja": "オーストラリア領インド洋地域",
+    "name": "Indian Ocean Ter.",
+    "iso_a2": "AU",
+    "flag": "au.svg"
+  },
+  {
     "name_ja": "オーストリア",
     "name": "Austria",
     "iso_a2": "AT",
     "flag": "at.svg"
+  },
+  {
+    "name_ja": "オーランド諸島",
+    "name": "Åland",
+    "iso_a2": "AX",
+    "flag": "ax.svg"
   },
   {
     "name_ja": "オマーン",
@@ -208,6 +280,18 @@
     "name": "Ghana",
     "iso_a2": "GH",
     "flag": "gh.svg"
+  },
+  {
+    "name_ja": "カーボベルデ",
+    "name": "Cabo Verde",
+    "iso_a2": "CV",
+    "flag": "cv.svg"
+  },
+  {
+    "name_ja": "ガーンジー",
+    "name": "Guernsey",
+    "iso_a2": "GG",
+    "flag": "gg.svg"
   },
   {
     "name_ja": "ガイアナ",
@@ -282,10 +366,22 @@
     "flag": "cu.svg"
   },
   {
+    "name_ja": "キュラソー",
+    "name": "Curaçao",
+    "iso_a2": "CW",
+    "flag": "cw.svg"
+  },
+  {
     "name_ja": "ギリシャ",
     "name": "Greece",
     "iso_a2": "GR",
     "flag": "gr.svg"
+  },
+  {
+    "name_ja": "キリバス",
+    "name": "Kiribati",
+    "iso_a2": "KI",
+    "flag": "ki.svg"
   },
   {
     "name_ja": "キルギス",
@@ -300,10 +396,22 @@
     "flag": "gt.svg"
   },
   {
+    "name_ja": "グアム",
+    "name": "Guam",
+    "iso_a2": "GU",
+    "flag": "gu.svg"
+  },
+  {
     "name_ja": "クウェート",
     "name": "Kuwait",
     "iso_a2": "KW",
     "flag": "kw.svg"
+  },
+  {
+    "name_ja": "クック諸島",
+    "name": "Cook Is.",
+    "iso_a2": "CK",
+    "flag": "ck.svg"
   },
   {
     "name_ja": "グリーンランド",
@@ -312,10 +420,28 @@
     "flag": "gl.svg"
   },
   {
+    "name_ja": "クリスマス島",
+    "name": "Christmas I.",
+    "iso_a2": "CX",
+    "flag": "cx.svg"
+  },
+  {
+    "name_ja": "グレナダ",
+    "name": "Grenada",
+    "iso_a2": "GD",
+    "flag": "gd.svg"
+  },
+  {
     "name_ja": "クロアチア",
     "name": "Croatia",
     "iso_a2": "HR",
     "flag": "hr.svg"
+  },
+  {
+    "name_ja": "ケイマン諸島",
+    "name": "Cayman Is.",
+    "iso_a2": "KY",
+    "flag": "ky.svg"
   },
   {
     "name_ja": "ケニア",
@@ -338,8 +464,14 @@
   {
     "name_ja": "コソボ共和国",
     "name": "Kosovo",
-    "iso_a2": "-99",
+    "iso_a2": "XK",
     "flag": "xk.svg"
+  },
+  {
+    "name_ja": "コモロ",
+    "name": "Comoros",
+    "iso_a2": "KM",
+    "flag": "km.svg"
   },
   {
     "name_ja": "コロンビア",
@@ -366,10 +498,58 @@
     "flag": "sa.svg"
   },
   {
+    "name_ja": "サウスジョージア・サウスサンドウィッチ諸島",
+    "name": "S. Geo. and the Is.",
+    "iso_a2": "GS",
+    "flag": "gs.svg"
+  },
+  {
+    "name_ja": "サモア",
+    "name": "Samoa",
+    "iso_a2": "WS",
+    "flag": "ws.svg"
+  },
+  {
+    "name_ja": "サン・バルテルミー島",
+    "name": "St-Barthélemy",
+    "iso_a2": "BL",
+    "flag": "bl.svg"
+  },
+  {
+    "name_ja": "サン・マルタン",
+    "name": "St-Martin",
+    "iso_a2": "MF",
+    "flag": "mf.svg"
+  },
+  {
+    "name_ja": "サントメ・プリンシペ",
+    "name": "São Tomé and Principe",
+    "iso_a2": "ST",
+    "flag": "st.svg"
+  },
+  {
     "name_ja": "ザンビア",
     "name": "Zambia",
     "iso_a2": "ZM",
     "flag": "zm.svg"
+  },
+  {
+    "name_ja": "サンピエール島・ミクロン島",
+    "name": "St. Pierre and Miquelon",
+    "iso_a2": "PM",
+    "flag": "pm.svg"
+  },
+  {
+    "name_ja": "サンマリノ",
+    "name": "San Marino",
+    "iso_a2": "SM",
+    "flag": "sm.svg"
+  },
+  {
+    "name_ja": "シアチェン氷河",
+    "name": "Siachen Glacier",
+    "iso_a2": "-99",
+    "flag": null
   },
   {
     "name_ja": "シエラレオネ",
@@ -382,6 +562,18 @@
     "name": "Djibouti",
     "iso_a2": "DJ",
     "flag": "dj.svg"
+  },
+  {
+    "name_ja": "ジブラルタル",
+    "name": "Gibraltar",
+    "iso_a2": "GI",
+    "flag": "gi.svg"
+  },
+  {
+    "name_ja": "ジャージー",
+    "name": "Jersey",
+    "iso_a2": "JE",
+    "flag": "je.svg"
   },
   {
     "name_ja": "ジャマイカ",
@@ -400,6 +592,18 @@
     "name": "Syria",
     "iso_a2": "SY",
     "flag": "sy.svg"
+  },
+  {
+    "name_ja": "シンガポール",
+    "name": "Singapore",
+    "iso_a2": "SG",
+    "flag": "sg.svg"
+  },
+  {
+    "name_ja": "シント・マールテン",
+    "name": "Sint Maarten",
+    "iso_a2": "SX",
+    "flag": "sx.svg"
   },
   {
     "name_ja": "ジンバブエ",
@@ -456,6 +660,12 @@
     "flag": "si.svg"
   },
   {
+    "name_ja": "セーシェル",
+    "name": "Seychelles",
+    "iso_a2": "SC",
+    "flag": "sc.svg"
+  },
+  {
     "name_ja": "セネガル",
     "name": "Senegal",
     "iso_a2": "SN",
@@ -466,6 +676,30 @@
     "name": "Serbia",
     "iso_a2": "RS",
     "flag": "rs.svg"
+  },
+  {
+    "name_ja": "セントクリストファー・ネイビス",
+    "name": "St. Kitts and Nevis",
+    "iso_a2": "KN",
+    "flag": "kn.svg"
+  },
+  {
+    "name_ja": "セントビンセント・グレナディーン",
+    "name": "St. Vin. and Gren.",
+    "iso_a2": "VC",
+    "flag": "vc.svg"
+  },
+  {
+    "name_ja": "セントヘレナ",
+    "name": "Saint Helena",
+    "iso_a2": "SH",
+    "flag": "sh.svg"
+  },
+  {
+    "name_ja": "セントルシア",
+    "name": "Saint Lucia",
+    "iso_a2": "LC",
+    "flag": "lc.svg"
   },
   {
     "name_ja": "ソマリア",
@@ -484,6 +718,12 @@
     "name": "Solomon Is.",
     "iso_a2": "SB",
     "flag": "sb.svg"
+  },
+  {
+    "name_ja": "タークス・カイコス諸島",
+    "name": "Turks and Caicos Is.",
+    "iso_a2": "TC",
+    "flag": "tc.svg"
   },
   {
     "name_ja": "タイ王国",
@@ -528,6 +768,12 @@
     "flag": "cl.svg"
   },
   {
+    "name_ja": "ツバル",
+    "name": "Tuvalu",
+    "iso_a2": "TV",
+    "flag": "tv.svg"
+  },
+  {
     "name_ja": "デンマーク",
     "name": "Denmark",
     "iso_a2": "DK",
@@ -552,6 +798,12 @@
     "flag": "do.svg"
   },
   {
+    "name_ja": "ドミニカ国",
+    "name": "Dominica",
+    "iso_a2": "DM",
+    "flag": "dm.svg"
+  },
+  {
     "name_ja": "トリニダード・トバゴ",
     "name": "Trinidad and Tobago",
     "iso_a2": "TT",
@@ -570,16 +822,34 @@
     "flag": "tr.svg"
   },
   {
+    "name_ja": "トンガ",
+    "name": "Tonga",
+    "iso_a2": "TO",
+    "flag": "to.svg"
+  },
+  {
     "name_ja": "ナイジェリア",
     "name": "Nigeria",
     "iso_a2": "NG",
     "flag": "ng.svg"
   },
   {
+    "name_ja": "ナウル",
+    "name": "Nauru",
+    "iso_a2": "NR",
+    "flag": "nr.svg"
+  },
+  {
     "name_ja": "ナミビア",
     "name": "Namibia",
     "iso_a2": "NA",
     "flag": "na.svg"
+  },
+  {
+    "name_ja": "ニウエ",
+    "name": "Niue",
+    "iso_a2": "NU",
+    "flag": "nu.svg"
   },
   {
     "name_ja": "ニカラグア",
@@ -612,10 +882,28 @@
     "flag": "np.svg"
   },
   {
+    "name_ja": "ノーフォーク島",
+    "name": "Norfolk Island",
+    "iso_a2": "NF",
+    "flag": "nf.svg"
+  },
+  {
     "name_ja": "ノルウェー",
     "name": "Norway",
-    "iso_a2": "-99",
+    "iso_a2": "NO",
     "flag": "no.svg"
+  },
+  {
+    "name_ja": "ハード島とマクドナルド諸島",
+    "name": "Heard I. and McDonald Is.",
+    "iso_a2": "HM",
+    "flag": "hm.svg"
+  },
+  {
+    "name_ja": "バーレーン",
+    "name": "Bahrain",
+    "iso_a2": "BH",
+    "flag": "bh.svg"
   },
   {
     "name_ja": "ハイチ",
@@ -628,6 +916,12 @@
     "name": "Pakistan",
     "iso_a2": "PK",
     "flag": "pk.svg"
+  },
+  {
+    "name_ja": "バチカン",
+    "name": "Vatican",
+    "iso_a2": "VA",
+    "flag": "va.svg"
   },
   {
     "name_ja": "パナマ",
@@ -654,10 +948,28 @@
     "flag": "pg.svg"
   },
   {
+    "name_ja": "バミューダ諸島",
+    "name": "Bermuda",
+    "iso_a2": "BM",
+    "flag": "bm.svg"
+  },
+  {
+    "name_ja": "パラオ",
+    "name": "Palau",
+    "iso_a2": "PW",
+    "flag": "pw.svg"
+  },
+  {
     "name_ja": "パラグアイ",
     "name": "Paraguay",
     "iso_a2": "PY",
     "flag": "py.svg"
+  },
+  {
+    "name_ja": "バルバドス",
+    "name": "Barbados",
+    "iso_a2": "BB",
+    "flag": "bb.svg"
   },
   {
     "name_ja": "パレスチナ",
@@ -676,6 +988,12 @@
     "name": "Bangladesh",
     "iso_a2": "BD",
     "flag": "bd.svg"
+  },
+  {
+    "name_ja": "ピトケアン諸島",
+    "name": "Pitcairn Is.",
+    "iso_a2": "PN",
+    "flag": "pn.svg"
   },
   {
     "name_ja": "フィジー",
@@ -708,6 +1026,12 @@
     "flag": "pr.svg"
   },
   {
+    "name_ja": "フェロー諸島",
+    "name": "Faeroe Is.",
+    "iso_a2": "FO",
+    "flag": "fo.svg"
+  },
+  {
     "name_ja": "フォークランド諸島",
     "name": "Falkland Is.",
     "iso_a2": "FK",
@@ -722,8 +1046,14 @@
   {
     "name_ja": "フランス",
     "name": "France",
-    "iso_a2": "-99",
+    "iso_a2": "FR",
     "flag": "fr.svg"
+  },
+  {
+    "name_ja": "フランス領ポリネシア",
+    "name": "Fr. Polynesia",
+    "iso_a2": "PF",
+    "flag": "pf.svg"
   },
   {
     "name_ja": "フランス領南方・南極地域",
@@ -834,6 +1164,18 @@
     "flag": "hn.svg"
   },
   {
+    "name_ja": "マーシャル諸島",
+    "name": "Marshall Is.",
+    "iso_a2": "MH",
+    "flag": "mh.svg"
+  },
+  {
+    "name_ja": "マカオ",
+    "name": "Macao",
+    "iso_a2": "MO",
+    "flag": "mo.svg"
+  },
+  {
     "name_ja": "マダガスカル",
     "name": "Madagascar",
     "iso_a2": "MG",
@@ -852,10 +1194,28 @@
     "flag": "ml.svg"
   },
   {
+    "name_ja": "マルタ",
+    "name": "Malta",
+    "iso_a2": "MT",
+    "flag": "mt.svg"
+  },
+  {
     "name_ja": "マレーシア",
     "name": "Malaysia",
     "iso_a2": "MY",
     "flag": "my.svg"
+  },
+  {
+    "name_ja": "マン島",
+    "name": "Isle of Man",
+    "iso_a2": "IM",
+    "flag": "im.svg"
+  },
+  {
+    "name_ja": "ミクロネシア連邦",
+    "name": "Micronesia",
+    "iso_a2": "FM",
+    "flag": "fm.svg"
   },
   {
     "name_ja": "ミャンマー",
@@ -870,6 +1230,12 @@
     "flag": "mx.svg"
   },
   {
+    "name_ja": "モーリシャス",
+    "name": "Mauritius",
+    "iso_a2": "MU",
+    "flag": "mu.svg"
+  },
+  {
     "name_ja": "モーリタニア",
     "name": "Mauritania",
     "iso_a2": "MR",
@@ -880,6 +1246,18 @@
     "name": "Mozambique",
     "iso_a2": "MZ",
     "flag": "mz.svg"
+  },
+  {
+    "name_ja": "モナコ",
+    "name": "Monaco",
+    "iso_a2": "MC",
+    "flag": "mc.svg"
+  },
+  {
+    "name_ja": "モルディブ",
+    "name": "Maldives",
+    "iso_a2": "MV",
+    "flag": "mv.svg"
   },
   {
     "name_ja": "モルドバ",
@@ -904,6 +1282,12 @@
     "name": "Montenegro",
     "iso_a2": "ME",
     "flag": "me.svg"
+  },
+  {
+    "name_ja": "モントセラト",
+    "name": "Montserrat",
+    "iso_a2": "MS",
+    "flag": "ms.svg"
   },
   {
     "name_ja": "ヨルダン",
@@ -934,6 +1318,12 @@
     "name": "Libya",
     "iso_a2": "LY",
     "flag": "ly.svg"
+  },
+  {
+    "name_ja": "リヒテンシュタイン",
+    "name": "Liechtenstein",
+    "iso_a2": "LI",
+    "flag": "li.svg"
   },
   {
     "name_ja": "リベリア",
@@ -976,6 +1366,12 @@
     "name": "Russia",
     "iso_a2": "RU",
     "flag": "ru.svg"
+  },
+  {
+    "name_ja": "香港",
+    "name": "Hong Kong",
+    "iso_a2": "HK",
+    "flag": "hk.svg"
   },
   {
     "name_ja": "西サハラ",
@@ -1060,5 +1456,11 @@
     "name": "North Macedonia",
     "iso_a2": "MK",
     "flag": "mk.svg"
+  },
+  {
+    "name_ja": "北マリアナ諸島",
+    "name": "N. Mariana Is.",
+    "iso_a2": "MP",
+    "flag": "mp.svg"
   }
 ]
