@@ -1,7 +1,7 @@
 import { geoNaturalEarth1, geoPath } from "d3-geo";
 import { marked } from "marked";
 import "./style.css";
-import worldData from "./data/world-110m.json";
+import worldData from "./data/world-50m.json";
 import { CONTINENT_STYLES, continentSlug, resolveContinent } from "./continents";
 import { allTags, CATEGORY_ORDER, MAX_STARS, SUBCATEGORY_ORDER, countriesForTagSelection, sortByStars, starsOf, tipsForCountry, type Tip } from "./tips";
 import { flagUrlForCountry, tldsForCountry } from "./countryData";

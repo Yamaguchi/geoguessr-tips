@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "validate-tips": "node scripts/validate-tips.mjs",
+    "build-map-data": "node scripts/build-map-data.mjs",
+    "build-flags": "node scripts/build-flags.mjs",
     "build": "node scripts/validate-tips.mjs && tsc -b && vite build",
     "preview": "vite preview"
   },
