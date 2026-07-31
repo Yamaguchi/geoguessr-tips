@@ -33,9 +33,7 @@ app.innerHTML = `
     </details>
     <div class="layout">
       <main>
-        <div class="map-card" id="map-card">
-          <button type="button" id="back-button" class="back-button" hidden>&larr; 世界地図に戻る</button>
-        </div>
+        <div class="map-card" id="map-card"></div>
         <ul class="legend" id="legend"></ul>
       </main>
       <section class="country-panel" id="country-panel" hidden>
@@ -69,20 +67,28 @@ const path = geoPath(projection);
 const svg = document.createElementNS(svgNS, "svg");
 svg.setAttribute("id", "world-map");
 svg.setAttribute("viewBox", worldViewBox);
-svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
+svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
 svg.setAttribute("role", "img");
-svg.setAttribute("aria-label", "大陸別に色分けした世界地図。クリックすると大陸にズームする");
+svg.setAttribute("aria-label", "大陸別に色分けした世界地図。国をクリックするとその国にズームする。ホイールで拡大縮小、ドラッグで移動できる");
 
 const continentGroups = new Map<string, CountryFeature[]>();
-const continentBounds = new Map<string, [number, number, number, number]>();
 const featureByCountryName = new Map<string, { feature: CountryFeature; idx: number }>();
 
-// ロシア東部やフィジーの日付変更線またぎなど遠隔領域が全体境界を歪めるため、
-// ヨーロッパとオセアニアは経緯度矩形で明示的にズーム範囲を指定する
-// （はみ出す領域は切れてよい: ロシア東部、フィジー等）。
-const ZOOM_LONLAT_OVERRIDES: Record<string, [number, number, number, number]> = {
-  Europe: [-25, 33, 45, 72],
-  Oceania: [100, -50, 180, 0],
+// 日付変更線をまたぐ国や、本土から遠く離れた海外領土を持つ国は、
+// 図形の外接矩形をそのまま使うと世界全体まで引きの絵になってしまう。
+// これらは本土が収まる経緯度矩形を明示する（離れた領土は画面外でよい）。
+const COUNTRY_ZOOM_LONLAT_OVERRIDES: Record<string, [number, number, number, number]> = {
+  ロシア: [19, 41, 180, 78],
+  アメリカ合衆国: [-125, 24, -66, 50],
+  フィジー: [176.5, -19.5, 180, -15.5],
+  ニュージーランド: [166, -47.5, 179, -34],
+  フランス: [-5.5, 41, 9.8, 51.5],
+  オランダ: [3.2, 50.7, 7.3, 53.6],
+  ノルウェー: [4, 57.8, 31.5, 71.3],
+  ポルトガル: [-9.6, 36.9, -6.1, 42.2],
+  スペイン: [-9.4, 35.9, 3.4, 43.9],
+  エクアドル: [-81.1, -5.1, -75.1, 1.5],
+  チリ: [-76, -56, -66, -17.5],
 };
 
 function bboxForLonLatRect(
@@ -132,13 +138,6 @@ features.forEach((feature, idx) => {
 
   svg.appendChild(pathEl);
 
-  const bounds = path.bounds(feature as never);
-  const [[x0, y0], [x1, y1]] = bounds;
-  const prev = continentBounds.get(continent);
-  continentBounds.set(continent, prev
-    ? [Math.min(prev[0], x0), Math.min(prev[1], y0), Math.max(prev[2], x1), Math.max(prev[3], y1)]
-    : [x0, y0, x1, y1]);
-
   const group = continentGroups.get(continent);
   if (group) group.push(feature);
   else continentGroups.set(continent, [feature]);
@@ -156,7 +155,6 @@ for (const [continent, style] of Object.entries(CONTINENT_STYLES)) {
   legend.appendChild(li);
 }
 
-const backButton = document.querySelector<HTMLButtonElement>("#back-button")!;
 const countryPanel = document.querySelector<HTMLElement>("#country-panel")!;
 const countryPanelTitle = document.querySelector<HTMLHeadingElement>("#country-panel-title")!;
 const countryGrid = document.querySelector<HTMLDivElement>("#country-grid")!;
@@ -344,29 +342,54 @@ function clearCountrySelection() {
   setTipsCount(0);
 }
 
-function zoomToContinent(continent: string) {
-  const lonLatOverride = ZOOM_LONLAT_OVERRIDES[continent];
-  const bounds = lonLatOverride ? bboxForLonLatRect(lonLatOverride) : continentBounds.get(continent);
-  if (!bounds) return;
-  const [x0, y0, x1, y1] = bounds;
-  const w = x1 - x0;
-  const h = y1 - y0;
-  const pad = Math.max(w, h, 40) * 0.12;
-  svg.setAttribute("viewBox", `${x0 - pad} ${y0 - pad} ${w + pad * 2} ${h + pad * 2}`);
-  // 大陸ズームはアフリカ・南アメリカ等、南北に細長い大陸を切らずに収めるため縦を拡張し、
-  // 切り取らず全体が収まるようmeetに切り替える
-  // meetは全体を収めるだけでトリムしないため、世界全体表示用の500pxに縛られず
-  // コンテナ全体（700px）まで拡大して見やすくする
-  svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
-  svg.style.height = "100%";
-  backButton.hidden = false;
+interface ViewBox {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
+const WORLD_VIEW: ViewBox = { x: 0, y: 0, w: width, h: height };
+// これ以上は拡大しない下限。ジブラルタルやモナコを判別できる倍率まで許す。
+const MIN_VIEW_W = width / 300;
+// 国へズームしたときに周囲へ確保する余白の割合
+const COUNTRY_ZOOM_PAD = 0.6;
+// 国へのズームで寄りすぎないための表示幅の下限。これ以上の拡大はホイール操作で行う。
+const MIN_COUNTRY_VIEW_W = width / 150;
+
+let view: ViewBox = { ...WORLD_VIEW };
+
+/** ビューを世界の範囲内・拡大率の範囲内に収める。縦横比は世界地図と同じに保つ。 */
+function clampView(next: ViewBox): ViewBox {
+  const aspect = WORLD_VIEW.w / WORLD_VIEW.h;
+  const w = Math.min(Math.max(next.w, MIN_VIEW_W), WORLD_VIEW.w);
+  const h = w / aspect;
+  const x = Math.min(Math.max(next.x, WORLD_VIEW.x), WORLD_VIEW.x + WORLD_VIEW.w - w);
+  const y = Math.min(Math.max(next.y, WORLD_VIEW.y), WORLD_VIEW.y + WORLD_VIEW.h - h);
+  return { x, y, w, h };
+}
+
+function setView(next: ViewBox) {
+  view = clampView(next);
+  svg.setAttribute("viewBox", `${view.x} ${view.y} ${view.w} ${view.h}`);
+}
+
+function viewForBounds([x0, y0, x1, y1]: [number, number, number, number], minWidth: number): ViewBox {
+  const aspect = WORLD_VIEW.w / WORLD_VIEW.h;
+  const cx = (x0 + x1) / 2;
+  const cy = (y0 + y1) / 2;
+  const w = Math.max((x1 - x0) * (1 + COUNTRY_ZOOM_PAD), (y1 - y0) * (1 + COUNTRY_ZOOM_PAD) * aspect, minWidth);
+  return { x: cx - w / 2, y: cy - w / aspect / 2, w, h: w / aspect };
+}
+
+function zoomToCountry(feature: CountryFeature) {
+  const override = COUNTRY_ZOOM_LONLAT_OVERRIDES[feature.properties.name_ja];
+  const bounds = override ? bboxForLonLatRect(override) : (path.bounds(feature as never).flat() as [number, number, number, number]);
+  setView(viewForBounds(bounds, MIN_COUNTRY_VIEW_W));
 }
 
 function resetMapView() {
-  svg.setAttribute("viewBox", worldViewBox);
-  svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
-  svg.style.height = "";
-  backButton.hidden = true;
+  setView({ ...WORLD_VIEW });
 }
 
 function showCountryGrid(continent: string) {
@@ -477,15 +500,86 @@ function selectOnlyTag(tag: string) {
   updateTagSearch();
 }
 
+/** クライアント座標をSVGのviewBox座標へ変換する。 */
+function viewPointFromEvent(event: { clientX: number; clientY: number }): { x: number; y: number } {
+  const rect = svg.getBoundingClientRect();
+  // preserveAspectRatio="xMidYMid meet" で描画されるため、実際の縮尺は幅と高さの小さい方で決まる
+  const scale = Math.min(rect.width / view.w, rect.height / view.h);
+  const drawnW = view.w * scale;
+  const drawnH = view.h * scale;
+  const offsetX = rect.left + (rect.width - drawnW) / 2;
+  const offsetY = rect.top + (rect.height - drawnH) / 2;
+  return {
+    x: view.x + (event.clientX - offsetX) / scale,
+    y: view.y + (event.clientY - offsetY) / scale,
+  };
+}
+
+const ZOOM_STEP = 1.0015;
+
+svg.addEventListener(
+  "wheel",
+  (event) => {
+    event.preventDefault();
+    const anchor = viewPointFromEvent(event);
+    const factor = ZOOM_STEP ** event.deltaY;
+    const w = view.w * factor;
+    // ホイール位置の地点が動かないように原点をずらす
+    const ratioX = (anchor.x - view.x) / view.w;
+    const ratioY = (anchor.y - view.y) / view.h;
+    setView({ x: anchor.x - w * ratioX, y: anchor.y - (w / (WORLD_VIEW.w / WORLD_VIEW.h)) * ratioY, w, h: 0 });
+  },
+  { passive: false },
+);
+
+// ドラッグ移動。押した位置からしきい値以上動いた場合はクリック（国の選択）として扱わない。
+const DRAG_THRESHOLD_PX = 4;
+let dragOrigin: { clientX: number; clientY: number; view: ViewBox } | null = null;
+let dragged = false;
+
+svg.addEventListener("pointerdown", (event) => {
+  if (event.button !== 0) return;
+  dragOrigin = { clientX: event.clientX, clientY: event.clientY, view: { ...view } };
+  dragged = false;
+});
+
+svg.addEventListener("pointermove", (event) => {
+  if (!dragOrigin) return;
+  const dx = event.clientX - dragOrigin.clientX;
+  const dy = event.clientY - dragOrigin.clientY;
+  if (!dragged && Math.hypot(dx, dy) < DRAG_THRESHOLD_PX) return;
+  if (!dragged) {
+    // ポインタを掴むのはドラッグが確定してからにする。
+    // pointerdownの時点で掴むと以降のイベント対象がSVG自身に固定され、
+    // クリックしても国のパスを取得できなくなる。
+    svg.setPointerCapture(event.pointerId);
+    svg.classList.add("dragging");
+  }
+  dragged = true;
+  const rect = svg.getBoundingClientRect();
+  const scale = Math.min(rect.width / dragOrigin.view.w, rect.height / dragOrigin.view.h);
+  setView({ ...dragOrigin.view, x: dragOrigin.view.x - dx / scale, y: dragOrigin.view.y - dy / scale });
+});
+
+function endDrag(event: PointerEvent) {
+  if (!dragOrigin) return;
+  if (svg.hasPointerCapture(event.pointerId)) svg.releasePointerCapture(event.pointerId);
+  dragOrigin = null;
+  svg.classList.remove("dragging");
+}
+
+svg.addEventListener("pointerup", endDrag);
+svg.addEventListener("pointercancel", endDrag);
+
 svg.addEventListener("click", (event) => {
+  if (dragged) return;
   const target = (event.target as Element).closest<SVGPathElement>("path.continent-path");
   if (!target) return;
   const idx = Number(target.dataset.idx);
   const feature = features[idx];
   if (!feature) return;
-  const continent = resolveContinent(feature.properties.continent);
-  zoomToContinent(continent);
-  showCountryGrid(continent);
+  showCountryGrid(resolveContinent(feature.properties.continent));
+  zoomToCountry(feature);
 
   const cellEl = countryGrid.querySelector<HTMLElement>(`.country-cell[data-idx="${idx}"]`);
   selectCountry(feature, target, cellEl);
@@ -500,6 +594,7 @@ countryGrid.addEventListener("click", (event) => {
   if (!feature) return;
   const pathEl = svg.querySelector<SVGPathElement>(`path.continent-path[data-idx="${idx}"]`);
   selectCountry(feature, pathEl, target);
+  zoomToCountry(feature);
 });
 
 tipsList.addEventListener("click", (event) => {
@@ -508,11 +603,6 @@ tipsList.addEventListener("click", (event) => {
   const tag = target.dataset.tag;
   if (!tag) return;
   selectOnlyTag(tag);
-});
-
-backButton.addEventListener("click", () => {
-  resetMapView();
-  showAllCountriesGrid();
 });
 
 tagSearchGroups.addEventListener("change", () => {
