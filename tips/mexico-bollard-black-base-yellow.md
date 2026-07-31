@@ -4,6 +4,7 @@ category: ボラード
 locations:
   - continent: 北アメリカ
     country: メキシコ
+street_view: "https://www.google.com/maps/embed?pb=!4v1785487462760!6m8!1m7!1sNgCI00tg0vTTbXuPtAjKQg!2m2!1d29.21691614441135!2d-110.9289625159586!3f293.0218600766161!4f-4.084845582306016!5f2.522433990598379"
 tags:
   - ボラード
   - ボラード/白地
