@@ -5,6 +5,7 @@ locations:
   - continent: アフリカ
     country: チュニジア
 stars: 3
+street_view: "https://www.google.com/maps/embed?pb=!4v1785578155812!6m8!1m7!1sC5Ydl8J5QD3xyGR7JVr15g!2m2!1d33.49983715158368!2d11.10774190436663!3f293.78118248452915!4f-14.074661477882273!5f2.5360914903247935"
 tags:
   - ナンバープレート
   - ナンバープレート/黒
